@@ -10,7 +10,6 @@
 
 
 #Table of Contents:
-### Test if the hosts file is working - fakesite.walmart to google.com
 ### Random custom SK entries
 ### Various Win10 Telemetry blocks
 ### Hulu ads
@@ -21,15 +20,14 @@
 
 #########################################################################################################################################
 
-#Test if the hosts file is working - fakesite.walmart to google.com
-172.217.12.132 fakesite.walmart
-
-#########################################################################################################################################
-
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
-0.0.0.0	*.msecn.net # Block Skype ads
-0.0.0.0 alb.reddit.com # Reddit ads
+172.217.12.132 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
+0.0.0.0	*.msecn.net                                         #Block Skype ads
+0.0.0.0 alb.reddit.com # Reddit ads                         #MSN Bing ad server observed by Wireshark SK 2020-01-01
+0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
+0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
+0.0.0.0 a23-63-77-136.deploy.static.akamaitechnologies.com  #MSN Bing ad server observed by Wireshark SK 2020-01-01
 
 #########################################################################################################################################
 
