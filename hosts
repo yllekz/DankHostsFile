@@ -28,6 +28,7 @@
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 a23-63-77-136.deploy.static.akamaitechnologies.com  #MSN Bing ad server observed by Wireshark SK 2020-01-01
+0.0.0.0 120-52-protection.greywizard.net                    #Weird Poland-based server (185.66.120.52/corneey.com) coming in via Coini banner Ads observed by Wireshark SK 2020-01-01
 
 #########################################################################################################################################
 
