@@ -41925,7 +41925,7 @@
 0.0.0.0 stats.backcountry.com
 0.0.0.0 omni.basspro.com
 0.0.0.0 sa.bbc.co.uk  #[may affect iPlayer app]
-0.0.0.0 metrics.beachbody.com
+#0.0.0.0 metrics.beachbody.com #Unblocked SK 3/11/20
 0.0.0.0 a.beliefnet.com
 0.0.0.0 metrics.bestbuy.com
 0.0.0.0 metrics.bet.com
@@ -42102,7 +42102,7 @@
 0.0.0.0 om.symantec.com
 0.0.0.0 metrics.syracuse.com
 0.0.0.0 analytics.tbs.com
-0.0.0.0 metrics.teambeachbody.com
+#0.0.0.0 metrics.teambeachbody.com #Unblocked SK 3/11/20
 0.0.0.0 stats2.teenvogue.com
 0.0.0.0 info.telstra.com
 0.0.0.0 metrics.tgw.com
