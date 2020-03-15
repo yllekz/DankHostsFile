@@ -16482,13 +16482,13 @@
 # If your software is able, the below domains and all subdomains should be blocked
 #*.angiemktg.com
 #*.weconfirmyou.com
-0.0.0.0 cws.conviva.com
-0.0.0.0 www.cws.conviva.com
+#0.0.0.0 cws.conviva.com #Unblocked SK 3/15/20
+#0.0.0.0 www.cws.conviva.com #Unblocked SK 3/15/20
 #*.cws.conviva.com
 0.0.0.0 vrl.m.conviva.com
 0.0.0.0 www.vrl.m.conviva.com
-0.0.0.0 zee.cws.conviva.com
-0.0.0.0 www.zee.cws.conviva.com
+#0.0.0.0 zee.cws.conviva.com #Unblocked SK 3/15/20
+#0.0.0.0 www.zee.cws.conviva.com #Unblocked SK 3/15/20
 
 # These stink-up yahoo finance
 0.0.0.0 beap-bc.yahoo.com
@@ -27217,7 +27217,7 @@
 0.0.0.0 charmedno1.com
 0.0.0.0 charmflirt.com
 0.0.0.0 charmstroy.info
-0.0.0.0 chartbeat.com
+#0.0.0.0 chartbeat.com #Unblocked SK 3/15/20
 0.0.0.0 chechla.cnixon.com
 0.0.0.0 checkintocash.data.7bpeople.com
 0.0.0.0 check.thealwaysnewandfreeupdating.stream
@@ -29627,7 +29627,7 @@
 0.0.0.0 pick-savings.com
 0.0.0.0 pickytime.com
 0.0.0.0 p.ic.tynt.com
-0.0.0.0 ping.chartbeat.net
+#0.0.0.0 ping.chartbeat.net #Unblocked SK 3/15/20
 0.0.0.0 pingfore.qq.com
 0.0.0.0 pingfore.soso.com
 0.0.0.0 pink.habralab.ru
@@ -30497,7 +30497,7 @@
 0.0.0.0 static.aff-landing-tmp.foxtab.com
 0.0.0.0 staticb.mydirtyhobby.com
 0.0.0.0 static.carbonads.com
-0.0.0.0 static.chartbeat.com
+#0.0.0.0 static.chartbeat.com #Unblocked SK 3/15/20
 0.0.0.0 static.clickonometrics.pl
 0.0.0.0 static.clicktorrent.info
 0.0.0.0 static.creatives.livejasmin.com
@@ -31637,7 +31637,7 @@
 0.0.0.0 www.cell-phone-giveaways.com
 0.0.0.0 www.cellphoneincentives.com
 0.0.0.0 www.chainsawoffer.com
-0.0.0.0 www.chartbeat.com
+#0.0.0.0 www.chartbeat.com #Unblocked SK 3/15/20
 0.0.0.0 www.choicedealz.com
 0.0.0.0 www.choicesurveypanel.com
 0.0.0.0 www.christianbusinessadvertising.com
@@ -34626,7 +34626,7 @@
 0.0.0.0 radar.cedexis.com
 0.0.0.0 c.cfjump.com
 0.0.0.0 t.cfjump.com
-0.0.0.0 adsapi.chartbeat.com
+#0.0.0.0 adsapi.chartbeat.com #Unblocked SK 3/15/20
 # 0.0.0.0 st.chatango.com #[affects chat]
 0.0.0.0 code.checkstat.nl
 0.0.0.0 www.checkstat.nl
@@ -40579,7 +40579,7 @@
 0.0.0.0 analytics.atdmt.com
 0.0.0.0 c1.atdmt.com
 0.0.0.0 h.atdmt.com
-0.0.0.0 bat.bing.com
+#0.0.0.0 bat.bing.com #Unblocked SK 3/15/20
 0.0.0.0 c.bing.com
 0.0.0.0 analytics.breakingnews.com
 0.0.0.0 analytics.clickdimensions.com
@@ -46171,7 +46171,7 @@
 0.0.0.0 channelintelligence.com
 0.0.0.0 chardwardse.club
 0.0.0.0 chart.dk
-0.0.0.0 chartbeat.net
+#0.0.0.0 chartbeat.net #Unblocked SK 3/15/20
 0.0.0.0 chartboost.com
 0.0.0.0 checkm8.com
 0.0.0.0 checkstat.nl
