@@ -62,6 +62,9 @@ iptables -I INPUT -s 123.16.0.0/12 -j logdrop #Caught in router sylogs (Vietnam 
 iptables -I INPUT -s 84.0.154.20 -j logdrop #Caught in router sylogs (Hungary)
 iptables -I INPUT -s 84.0.154.230 -j logdrop #Caught in router sylogs (Hungary)
 
+iptables -I INPUT -s 58.48.0.0/13 -j logdrop #high # of hits
+iptables -I INPUT -s 14.224.0.0/11 -j logdrop #high # of hits
+
 #endregion
 
 #ipsum list:
