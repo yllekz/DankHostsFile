@@ -64,6 +64,12 @@ iptables -I INPUT -s 84.0.154.230 -j logdrop #Caught in router sylogs (Hungary)
 
 iptables -I INPUT -s 58.48.0.0/13 -j logdrop #high # of hits
 iptables -I INPUT -s 14.224.0.0/11 -j logdrop #high # of hits
+iptables -I INPUT -s 51.79.0.0/16 -j logdrop #high # of hits
+iptables -I INPUT -s 37.49.224.0/21 -j logdrop #high # of hits
+iptables -I INPUT -s 37.59.0.0/16 -j logdrop #high # of hits
+iptables -I INPUT -s 51.91.0.0/16 -j logdrop #high # of hits
+iptables -I INPUT -s 1.160.0.0/12 -j logdrop #high # of hits
+iptables -I INPUT -s 36.224.0.0/12 -j logdrop #high # of hits
 
 #endregion
 
