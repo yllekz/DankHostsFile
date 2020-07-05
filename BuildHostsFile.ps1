@@ -102,7 +102,7 @@ $Exceptions += $row
 #endregion
 
 #Comment out exceptions from above list. TODO: Figure out a way to make this into a loop...
-$HostsFileContent += $StevenBlackHosts.RawContent
+$HostsFileContent += $StevenBlackHosts.Content
 
 $1 = $HostsFileContent.replace($Exceptions[0].Entry, "#$($Exceptions[0].Entry) $($Exceptions[0].Comment)")
 $2 = $1.replace($Exceptions[1].Entry, "#$($Exceptions[1].Entry) $($Exceptions[1].Comment)")
