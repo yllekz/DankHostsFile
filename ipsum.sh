@@ -62,14 +62,72 @@ iptables -I INPUT -s 123.16.0.0/12 -j logdrop #Caught in router sylogs (Vietnam 
 iptables -I INPUT -s 84.0.154.20 -j logdrop #Caught in router sylogs (Hungary)
 iptables -I INPUT -s 84.0.154.230 -j logdrop #Caught in router sylogs (Hungary)
 
-iptables -I INPUT -s 58.48.0.0/13 -j logdrop #high # of hits
-iptables -I INPUT -s 14.224.0.0/11 -j logdrop #high # of hits
-iptables -I INPUT -s 51.79.0.0/16 -j logdrop #high # of hits
-iptables -I INPUT -s 37.49.224.0/21 -j logdrop #high # of hits
-iptables -I INPUT -s 37.59.0.0/16 -j logdrop #high # of hits
-iptables -I INPUT -s 51.91.0.0/16 -j logdrop #high # of hits
-iptables -I INPUT -s 1.160.0.0/12 -j logdrop #high # of hits
-iptables -I INPUT -s 36.224.0.0/12 -j logdrop #high # of hits
+#region Country IP blocks that have historically high hit counts:
+iptables -I INPUT -s 58.48.0.0/13 -j logdrop
+iptables -I INPUT -s 14.224.0.0/11 -j logdrop
+iptables -I INPUT -s 51.79.0.0/16 -j logdrop
+iptables -I INPUT -s 37.49.224.0/21 -j logdrop
+iptables -I INPUT -s 37.59.0.0/16 -j logdrop
+iptables -I INPUT -s 51.91.0.0/16 -j logdrop
+iptables -I INPUT -s 1.160.0.0/12 -j logdrop
+iptables -I INPUT -s 36.224.0.0/12 -j logdrop
+iptables -I INPUT -s 49.4.0.0/14 -j logdrop
+iptables -I INPUT -s 37.49.224.0/21 -j logdrop
+iptables -I INPUT -s 37.59.0.0/16 -j logdrop
+iptables -I INPUT -s 114.32.0.0/12 -j logdrop
+iptables -I INPUT -s 39.8.0.0/13 -j logdrop
+iptables -I INPUT -s 91.148.192.0/18 -j logdrop
+iptables -I INPUT -s 113.96.0.0/12 -j logdrop
+iptables -I INPUT -s 183.128.0.0/11 -j logdrop
+iptables -I INPUT -s 134.19.176.0/20 -j logdrop
+iptables -I INPUT -s 91.240.116.0/22 -j logdrop
+iptables -I INPUT -s 27.34.240.0/20 -j logdrop
+iptables -I INPUT -s 146.88.240.4 -j logdrop
+iptables -I INPUT -s 1.160.0.0/12 -j logdrop
+iptables -I INPUT -s 36.224.0.0/12 -j logdrop
+iptables -I INPUT -s 116.16.0.0/12 -j logdrop
+iptables -I INPUT -s 106.192.0.0/11 -j logdrop
+iptables -I INPUT -s 14.160.0.0/11 -j logdrop
+iptables -I INPUT -s 14.224.0.0/11 -j logdrop
+iptables -I INPUT -s 42.108.0.0/14 -j logdrop
+iptables -I INPUT -s 111.240.0.0/12 -j logdrop
+iptables -I INPUT -s 114.224.0.0/12 -j logdrop
+iptables -I INPUT -s 59.124.0.0/14 -j logdrop
+iptables -I INPUT -s 106.12.0.0/14 -j logdrop
+iptables -I INPUT -s 117.192.0.0/10 -j logdrop
+iptables -I INPUT -s 46.221.0.0/16 -j logdrop
+iptables -I INPUT -s 81.212.0.0/14 -j logdrop
+iptables -I INPUT -s 84.2.222.0/23 -j logdrop
+iptables -I INPUT -s 82.197.192.0/19 -j logdrop
+iptables -I INPUT -s 183.192.0.0/10 -j logdrop
+iptables -I INPUT -s 46.107.112.0/21 -j logdrop
+iptables -I INPUT -s 125.64.0.0/13 -j logdrop
+iptables -I INPUT -s 176.63.0.0/16 -j logdrop
+iptables -I INPUT -s 185.53.88.0/24 -j logdrop
+iptables -I INPUT -s 178.128.128.0/17 -j logdrop
+iptables -I INPUT -s 185.7.76.0/22 -j logdrop
+iptables -I INPUT -s 85.148.0.0/14 -j logdrop
+iptables -I INPUT -s 84.105.0.0/18 -j logdrop
+iptables -I INPUT -s 112.0.0.0/10 -j logdrop
+iptables -I INPUT -s 113.160.0.0/11 -j logdrop
+iptables -I INPUT -s 122.224.0.0/12 -j logdrop
+iptables -I INPUT -s 42.112.0.0/13 -j logdrop
+iptables -I INPUT -s 59.88.0.0/13 -j logdrop
+iptables -I INPUT -s 86.91.0.0/16 -j logdrop
+iptables -I INPUT -s 182.56.0.0/14 -j logdrop
+iptables -I INPUT -s 49.232.0.0/14 -j logdrop
+iptables -I INPUT -s 77.243.189.0/28 -j logdrop
+iptables -I INPUT -s 78.92.0.0/16 -j logdrop
+iptables -I INPUT -s 81.204.0.0/14 -j logdrop
+iptables -I INPUT -s 118.68.0.0/14 -j logdrop
+iptables -I INPUT -s 122.116.0.0/15 -j logdrop
+iptables -I INPUT -s 145.133.0.0/16 -j logdrop
+iptables -I INPUT -s 145.236.0.0/16 -j logdrop
+iptables -I INPUT -s 178.128.0.0/17 -j logdrop
+iptables -I INPUT -s 185.142.236.0/22 -j logdrop
+iptables -I INPUT -s 46.139.0.0/16 -j logdrop
+iptables -I INPUT -s 89.132.0.0/14 -j logdrop
+#endregion
 
 #endregion
 
