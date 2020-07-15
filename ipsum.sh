@@ -82,7 +82,6 @@ iptables -I INPUT -s 183.128.0.0/11 -j logdrop
 iptables -I INPUT -s 134.19.176.0/20 -j logdrop
 iptables -I INPUT -s 91.240.116.0/22 -j logdrop
 iptables -I INPUT -s 27.34.240.0/20 -j logdrop
-iptables -I INPUT -s 146.88.240.4 -j logdrop
 iptables -I INPUT -s 1.160.0.0/12 -j logdrop
 iptables -I INPUT -s 36.224.0.0/12 -j logdrop
 iptables -I INPUT -s 116.16.0.0/12 -j logdrop
