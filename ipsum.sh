@@ -47,6 +47,9 @@ iptables -I INPUT -s 185.200.118.42 -j logdrop #OpenVPN failed connection attemp
 iptables -I INPUT -s 185.200.118.40 -j logdrop #OpenVPN failed connection attempt (UK - London)
 iptables -I INPUT -s 185.200.118.49 -j logdrop #OpenVPN failed connection attempt (UK - London)
 iptables -I INPUT -s 185.200.118.0/24 -j logdrop #OpenVPN failed connection attempt (UK - London - entire range)
+iptables -I INPUT -s 192.35.169.27 -j logdrop #OpenVPN failed connection attempt (US - MI)
+iptables -I INPUT -s 192.35.168.199 -j logdrop #OpenVPN failed connection attempt (US - MI)
+
 
 iptables -I INPUT -s 220.134.36.88 -j logdrop #Caught in router sylogs (Taiwan)
 iptables -I input -s 220.134.0.0/16 -j logdrop #Caught in router sylogs (Taiwan - entire range)
