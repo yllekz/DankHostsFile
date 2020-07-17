@@ -228,18 +228,25 @@ iptables -I FORWARD -s 89.132.0.0/14 -j logdrop
 
 #endregion
 
-#ipsum list:
+#region ipsum list (works with R7800 but not Archer C9 DD-WRT build):
 for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt 2>/dev/null | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
     #do echo $ip; done #Confirm first
     do iptables -I INPUT -s $ip -j DROP;
     do iptables -I FORWARD -s $ip -j DROP;
 done;
+#endregion
 
-#For Archer C9....TODO: Finish this
-#for ip in $(wget -O ~/ipsum.txt https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
-    #do echo $ip; done #Confirm first
-    #do iptables -I INPUT -s $ip -j DROP;
-#done;
+echo $(date)
+
+#region ipsum list - Compatible with Archer C9 DD-WRT build which doesn't have curl:
+wget -O /tmp/ipsum.txt https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt
+cat /tmp/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1 | while read line 
+do
+   #echo $line;
+   do iptables -I INPUT -s $line -j DROP;
+   do iptables -I FORWARD -s $line -j DROP;
+done
+#endregion
 
 echo $(date)
 
@@ -248,5 +255,6 @@ echo $(date)
 
 ####Display for confirmation:
 #iptables -vnL INPUT --line-numbers
-#iptables -vnL OUTPUT --line-numbers
+#iptables -vnL FORWARD --line-numbers
 #iptables -vnL INPUT --line-number | sort -r -g -k 2 | more
+#iptables -vnL FORWARD --line-number | sort -r -g -k 2 | more
