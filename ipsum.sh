@@ -145,6 +145,7 @@ for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/m
     do iptables -I INPUT -s $ip -j DROP;
     do iptables -I FORWARD -s $ip -j DROP;
 done;
+#endregion
 
 #For Archer C9 (works on R7800 too):
 wget -O ~/ipsum.txt https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt
