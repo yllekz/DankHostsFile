@@ -15852,32 +15852,6 @@
 #region########################################################################################################################################
 # Start of StevenBlack Hosts
 # A select few entries have been unblocked to ensure sites like Hulu work.
-HTTP/1.1 200 OK
-Connection: keep-alive
-Cache-Control: max-age=300
-Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
-ETag: "e6bf60f8228f71e7a987a3b355c19711f541095b7ec6d3de0fd4b92e23aab881"
-Strict-Transport-Security: max-age=31536000
-X-Content-Type-Options: nosniff
-X-Frame-Options: deny
-X-XSS-Protection: 1; mode=block
-Via: 1.1 varnish (Varnish/6.0)
-Via: 1.1 varnish
-X-GitHub-Request-Id: 4140:626F:312F47:3B2918:5F16ED85
-Accept-Ranges: bytes
-Date: Tue, 21 Jul 2020 13:34:58 GMT
-X-Served-By: cache-bos4651-BOS
-X-Cache: HIT, HIT
-X-Cache-Hits: 1, 1
-X-Timer: S1595338499.821270,VS0,VE3
-Vary: Authorization
-Vary: Accept-Encoding
-Access-Control-Allow-Origin: *
-X-Fastly-Request-ID: 1239196643244b06cd005948c5569f17e620f38c
-Source-Age: 38
-Content-Length: 1763512
-Content-Type: text/plain; charset=utf-8
-Expires: Tue, 21 Jul 2020 13:39:58 GMT
 
 # Title: StevenBlack/hosts
 #
