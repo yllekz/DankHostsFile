@@ -6,6 +6,22 @@ echo $(date) #Command takes about 20 minutes to fully process
 echo "Removing previous entries first..."
 ###Start of entry removals below:
 
+#region Purge FORWARD table
+#Purge existing Input table (keep the last 22 entries (20 entries + the two header lines), as those are placed there by default and we insert blocked entries before/above them)
+#Harmless if the list is default (aka 22 lines)
+blocked=`iptables -vnL FORWARD --line-numbers | wc -l`
+subtraction=$((blocked-22))
+
+#Ranged for loops are screwy in busybox:
+#https://microdevsys.com/wp/how-to-create-a-for-loop-to-print-a-sequence-or-range-of-numbers-on-dd-wrt-or-busybox-devices-linux/
+#https://www.linuxquestions.org/questions/programming-9/print-1-to-100-in-a-shell-script-680052/
+for i in `seq 1 $subtraction`;
+    #do echo "Removal ${i} of ${subtraction}";
+    do iptables -D FORWARD 1; #Delete line 1 x amount of times
+done;
+#endregion
+
+#region Purge INPUT table:
 #Purge existing Input table (keep the last 14 entries (12 entries + the two header lines), as those are placed there by default and we insert blocked entries before/above them)
 #Harmless if the list is default (aka 14 lines)
 blocked=`iptables -vnL INPUT --line-numbers | wc -l`
@@ -18,6 +34,7 @@ for i in `seq 1 $subtraction`;
     #do echo "Removal ${i} of ${subtraction}";
     do iptables -D INPUT 1; #Delete line 1 x amount of times
 done;
+#endregion
 
 #Purge existing Output table (harmless if the list is already blank)
 iptables -F OUTPUT
@@ -55,9 +72,13 @@ iptables -I INPUT -s 185.200.118.40 -j logdrop; iptables -I FORWARD -s 185.200.1
 iptables -I INPUT -s 185.200.118.49 -j logdrop; iptables -I FORWARD -s 185.200.118.49 -j logdrop #(UK - London)
 iptables -I FORWARD -s 185.200.118.51 -j logdrop; iptables -I INPUT -s 185.200.118.51 -j logdrop #(UK - London)
 iptables -I FORWARD -s 185.200.118.58 -j logdrop; iptables -I INPUT -s 185.200.118.58 -j logdrop #(UK - London)
+iptables -I FORWARD -s 185.200.118.56 -j logdrop; iptables -I INPUT -s 185.200.118.56 -j logdrop #(UK - London)
+iptables -I FORWARD -s 146.88.240.0/20 -j logdrop; iptables -I INPUT -s 146.88.240.0/20 -j logdrop #(US - MI - entire range)
 iptables -I INPUT -s 146.88.240.4 -j logdrop; iptables -I FORWARD -s 146.88.240.4 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.169.22 -j logdrop; iptables -I FORWARD -s 192.35.169.22 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.27 -j logdrop; iptables -I FORWARD -s 192.35.169.27 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.199 -j logdrop; iptables -I FORWARD -s 192.35.168.199 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.168.216 -j logdrop; iptables -I FORWARD -s 192.35.168.216 -j logdrop #(US - MI)
 #endregion
 
 #region Caught in router syslogs:
@@ -140,11 +161,11 @@ iptables -I INPUT -s 89.132.0.0/14 -j logdrop; iptables -I FORWARD -s 89.132.0.0
 #endregion
 
 #ipsum list (works on R7800, does not work on Archer C9):
-for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt 2>/dev/null | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
+#for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt 2>/dev/null | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
     #do echo $ip; done #Confirm first
-    do iptables -I INPUT -s $ip -j DROP;
-    do iptables -I FORWARD -s $ip -j DROP;
-done;
+    #do iptables -I INPUT -s $ip -j DROP;
+    #do iptables -I FORWARD -s $ip -j DROP;
+#done;
 #endregion
 
 #For Archer C9 (works on R7800 too):

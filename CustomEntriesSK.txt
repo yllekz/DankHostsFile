@@ -1,4 +1,5 @@
 127.0.0.1	localhost
+#7 Sirelle names
 10.0.0.1	WiFight Club
 10.0.0.5	Battlebot
 10.0.0.3	JenPC
@@ -6,6 +7,14 @@
 10.0.0.7	LilNASX
 10.0.0.8	7SirelleFront
 10.0.0.9	7SirellePorch
+
+# 2 Lanc names
+10.1.0.1	2Lanc
+10.1.0.2	2LancLorexIndoor
+10.1.0.3	2Lanc2824
+10.1.0.6	TwoLancNAS
+10.1.0.5	2LancLorexOutdoor
+10.1.0.4	2LancLorexIndoorUSB
 
 #Begin custom entries:
 
@@ -27,7 +36,6 @@
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
 172.217.12.132 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
-0.0.0.0	*.msecn.net                                         #Block Skype ads
 0.0.0.0 alb.reddit.com # Reddit ads                         #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
