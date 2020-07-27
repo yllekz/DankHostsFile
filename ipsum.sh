@@ -49,10 +49,10 @@ echo "Adding entries to iptables..."
 #region Custom entries SK
 
 #region Various country CIDR blocks:
-iptables -I INPUT -s 42.48.244.41 -j logdrop; iptables -I FORWARD -s 42.48.244.41 -j logdrop #CN
 iptables -I INPUT -s 42.48.0.0/15 -j logdrop; iptables -I FORWARD -s 42.48.0.0/15 -j logdrop #CN - entire range
-iptables -I INPUT -s 54.37.87.65 -j logdrop; iptables -I FORWARD -s 54.37.87.65 -j logdrop #FR
+iptables -I INPUT -s 42.48.244.41 -j logdrop; iptables -I FORWARD -s 42.48.244.41 -j logdrop #CN
 iptables -I INPUT -s 54.36.0.0/16 -j logdrop; iptables -I FORWARD -s 54.36.0.0/16 -j logdrop #FR - entire range
+iptables -I INPUT -s 54.37.87.65 -j logdrop; iptables -I FORWARD -s 54.37.87.65 -j logdrop #FR
 #endregion
 
 #region Minecraft vandals:
@@ -84,17 +84,17 @@ iptables -I INPUT -s 192.35.168.245 -j logdrop; iptables -I FORWARD -s 192.35.16
 #endregion
 
 #region Caught in router syslogs:
-iptables -I INPUT -s 220.134.36.88 -j logdrop; iptables -I FORWARD -s 220.134.36.88 -j logdrop #(Taiwan)
-iptables -I INPUT -s 220.134.0.0/16 -j logdrop; iptables -I FORWARD -s 220.134.0.0/16 -j logdrop #(Taiwan - entire range)
-iptables -I INPUT -s 117.254.142.218 -j logdrop; iptables -I FORWARD -s 117.254.142.218 -j logdrop #(India)
-iptables -I INPUT -s 117.192.0.0/10 -j logdrop; iptables -I FORWARD -s 117.192.0.0/10 -j logdrop #Caught in router syslogs (India - entire range)
 iptables -I INPUT -s 171.67.70.87 -j logdrop; iptables -I FORWARD -s 171.67.70.87 -j logdrop #(US - CA)
-iptables -I INPUT -s 85.99.245.103 -j logdrop; iptables -I FORWARD -s 85.99.245.103 -j logdrop #(Turkey)
+iptables -I INPUT -s 220.134.0.0/16 -j logdrop; iptables -I FORWARD -s 220.134.0.0/16 -j logdrop #(Taiwan - entire range)
+iptables -I INPUT -s 220.134.36.88 -j logdrop; iptables -I FORWARD -s 220.134.36.88 -j logdrop #(Taiwan)
+iptables -I INPUT -s 117.192.0.0/10 -j logdrop; iptables -I FORWARD -s 117.192.0.0/10 -j logdrop #(India - entire range)
+iptables -I INPUT -s 117.254.142.218 -j logdrop; iptables -I FORWARD -s 117.254.142.218 -j logdrop #(India)
 iptables -I INPUT -s 85.99.244.0/23 -j logdrop; iptables -I FORWARD -s 85.99.244.0/23 -j logdrop #(Turkey - entire range)
-iptables -I INPUT -s 37.49.224.19 -j logdrop; iptables -I FORWARD -s 37.49.224.19 -j logdrop #(Netherlands)
+iptables -I INPUT -s 85.99.245.103 -j logdrop; iptables -I FORWARD -s 85.99.245.103 -j logdrop #(Turkey)
 iptables -I INPUT -s 37.49.224.0/24 -j logdrop; iptables -I FORWARD -s 37.49.224.0/24 -j logdrop #(Netherlands - entire range)
-iptables -I INPUT -s 123.19.44.5 -j logdrop; iptables -I FORWARD -s 123.19.44.5 -j logdrop #(Vietnam)
+iptables -I INPUT -s 37.49.224.19 -j logdrop; iptables -I FORWARD -s 37.49.224.19 -j logdrop #(Netherlands)
 iptables -I INPUT -s 123.16.0.0/12 -j logdrop; iptables -I FORWARD -s 123.16.0.0/12 -j logdrop #(Vietnam - entire range)
+iptables -I INPUT -s 123.19.44.5 -j logdrop; iptables -I FORWARD -s 123.19.44.5 -j logdrop #(Vietnam)
 iptables -I INPUT -s 84.0.154.20 -j logdrop; iptables -I FORWARD -s 84.0.154.20 -j logdrop #(Hungary)
 iptables -I INPUT -s 84.0.154.230 -j logdrop; iptables -I FORWARD -s 84.0.154.230 -j logdrop #(Hungary)
 #endregion
