@@ -79,6 +79,8 @@ iptables -I INPUT -s 192.35.169.22 -j logdrop; iptables -I FORWARD -s 192.35.169
 iptables -I INPUT -s 192.35.169.27 -j logdrop; iptables -I FORWARD -s 192.35.169.27 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.199 -j logdrop; iptables -I FORWARD -s 192.35.168.199 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.216 -j logdrop; iptables -I FORWARD -s 192.35.168.216 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.169.29 -j logdrop; iptables -I FORWARD -s 192.35.169.29 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.168.245 -j logdrop; iptables -I FORWARD -s 192.35.168.245 -j logdrop #(US - MI)
 #endregion
 
 #region Caught in router syslogs:
