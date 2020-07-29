@@ -15,6 +15,6 @@ prodhosts=/tmp/hosts
 
 wget -O $temphosts https://raw.githubusercontent.com/yllekz/DankHostsFile/master/hosts;
 while read line; do echo "$line" >> $prodhosts; done < $temphosts;
-killall -HUP dnsmasq
+killall -HUP dnsmasq;
 
 #endregion
