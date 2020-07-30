@@ -171,11 +171,11 @@ iptables -I INPUT -s 89.132.0.0/14 -j logdrop; iptables -I FORWARD -s 89.132.0.0
 #endregion
 
 #For Archer C9 (works on R7800 too):
-wget -O ~/ipsum.txt https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt
-for ip in $(cat ~/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
+wget -O /tmp/root/ipsum.txt https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt
+for ip in $(cat /tmp/root/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
     do iptables -I INPUT -s $ip -j DROP; done;
 
-for ip in $(cat ~/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
+for ip in $(cat /tmp/root/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
     do iptables -I FORWARD -s $ip -j DROP; done;
 
 echo $(date)

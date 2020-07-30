@@ -6,7 +6,7 @@
 
 #region pull hosts and append to hosts file:
 
-temphosts=~/hosts.txt
+temphosts=/tmp/root/hosts.txt
 prodhosts=/tmp/hosts
 
 #This is a work in progress to attempt to clear out the ...
