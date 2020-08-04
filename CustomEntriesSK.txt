@@ -1,4 +1,5 @@
 127.0.0.1	localhost
+
 #7 Sirelle names
 10.0.0.1	WiFight Club
 10.0.0.5	Battlebot
@@ -15,6 +16,14 @@
 10.1.0.6	TwoLancNAS
 10.1.0.5	2LancLorexOutdoor
 10.1.0.4	2LancLorexIndoorUSB
+
+# 4 Lanc names
+10.4.0.1	LancLand
+10.4.0.2	2824SW1
+10.4.0.3	2824SW2
+10.4.0.4	4LancLorex
+10.4.0.5    Kitchen-3847
+10.4.0.7	FourLancNAS
 
 #Begin custom entries:
 
