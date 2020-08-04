@@ -1,6 +1,6 @@
 #This should go into the startup section of DD-WRT's Commands.
 
-sleep 300; #Grace period in case you get locked uot of the router.
+sleep 300; #Grace period in case you get locked out of the router.
 
 #Pull hosts file script and run it
 hostsscript=/tmp/root/installhosts.sh
