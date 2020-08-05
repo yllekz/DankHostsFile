@@ -70,17 +70,27 @@ iptables -I INPUT -s 185.200.118.39 -j logdrop; iptables -I FORWARD -s 185.200.1
 iptables -I INPUT -s 185.200.118.42 -j logdrop; iptables -I FORWARD -s 185.200.118.42 -j logdrop #(UK - London)
 iptables -I INPUT -s 185.200.118.40 -j logdrop; iptables -I FORWARD -s 185.200.118.40 -j logdrop #(UK - London)
 iptables -I INPUT -s 185.200.118.49 -j logdrop; iptables -I FORWARD -s 185.200.118.49 -j logdrop #(UK - London)
-iptables -I FORWARD -s 185.200.118.51 -j logdrop; iptables -I INPUT -s 185.200.118.51 -j logdrop #(UK - London)
-iptables -I FORWARD -s 185.200.118.58 -j logdrop; iptables -I INPUT -s 185.200.118.58 -j logdrop #(UK - London)
-iptables -I FORWARD -s 185.200.118.56 -j logdrop; iptables -I INPUT -s 185.200.118.56 -j logdrop #(UK - London)
-iptables -I FORWARD -s 146.88.240.0/20 -j logdrop; iptables -I INPUT -s 146.88.240.0/20 -j logdrop #(US - MI - entire range)
+iptables -I INPUT -s 185.200.118.51 -j logdrop; iptables -I FORWARD -s 185.200.118.51 -j logdrop #(UK - London)
+iptables -I INPUT -s 185.200.118.58 -j logdrop; iptables -I FORWARD -s 185.200.118.58 -j logdrop #(UK - London)
+iptables -I INPUT -s 185.200.118.56 -j logdrop; iptables -I FORWARD -s 185.200.118.56 -j logdrop #(UK - London)
+iptables -I INPUT -s 185.200.118.67 -j logdrop; iptables -I FORWARD -s 185.200.118.67 -j logdrop #(UK - London)
+iptables -I INPUT -s 185.200.118.55 -j logdrop; iptables -I FORWARD -s 185.200.118.55 -j logdrop #(UK - London)
+iptables -I INPUT -s 185.200.118.83 -j logdrop; iptables -I FORWARD -s 185.200.118.55 -j logdrop #(UK - London)
+
+iptables -I INPUT -s 146.88.240.0/20 -j logdrop; iptables -I FORWARD -s 146.88.240.0/20 -j logdrop #(US - MI - entire range)
 iptables -I INPUT -s 146.88.240.4 -j logdrop; iptables -I FORWARD -s 146.88.240.4 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.22 -j logdrop; iptables -I FORWARD -s 192.35.169.22 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.27 -j logdrop; iptables -I FORWARD -s 192.35.169.27 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.199 -j logdrop; iptables -I FORWARD -s 192.35.168.199 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.216 -j logdrop; iptables -I FORWARD -s 192.35.168.216 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.169.24 -j logdrop; iptables -I FORWARD -s 192.35.169.24 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.169.20 -j logdrop; iptables -I FORWARD -s 192.35.169.20 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.29 -j logdrop; iptables -I FORWARD -s 192.35.169.29 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.168.245 -j logdrop; iptables -I FORWARD -s 192.35.168.245 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.168.249 -j logdrop; iptables -I FORWARD -s 192.35.168.249 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.168.194 -j logdrop; iptables -I FORWARD -s 192.35.168.194 -j logdrop #(US - MI)
+iptables -I INPUT -s 192.35.168.218 -j logdrop; iptables -I FORWARD -s 192.35.168.218 -j logdrop #(US - MI)
+
 #endregion
 
 #region Caught in router syslogs:
