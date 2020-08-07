@@ -8,10 +8,14 @@
 
 temphosts=/tmp/root/hosts.txt
 prodhosts=/tmp/hosts
+hostsbackup /tmp/root/hosts-bak
 
 #This is a work in progress to attempt to clear out the ...
 #while read line; do if [ "$line" = "10.*" ]; then echo "$line"; else; fi; done < $prodhosts;
 #while read line; do if [ "$line" = "10.*" ]; then echo "$line" >> $prodhosts; else; fi; done < $prodhosts;
+
+#Take the existing hosts file and move it out of play
+#mv $prodhosts $hostsbackup
 
 wget -O $temphosts https://raw.githubusercontent.com/yllekz/DankHostsFile/master/hosts;
 while read line; do echo "$line" >> $prodhosts; done < $temphosts;
