@@ -95,6 +95,7 @@ iptables -I INPUT -s 192.35.168.218 -j logdrop; iptables -I FORWARD -s 192.35.16
 #endregion
 
 #region Caught in router syslogs:
+iptables -I INPUT -s 71.6.165.192 -j logdrop; iptables -I FORWARD -s 71.6.165.192 -j logdrop #(US - CA)
 iptables -I INPUT -s 171.67.70.87 -j logdrop; iptables -I FORWARD -s 171.67.70.87 -j logdrop #(US - CA)
 iptables -I INPUT -s 220.134.0.0/16 -j logdrop; iptables -I FORWARD -s 220.134.0.0/16 -j logdrop #(Taiwan - entire range)
 iptables -I INPUT -s 220.134.36.88 -j logdrop; iptables -I FORWARD -s 220.134.36.88 -j logdrop #(Taiwan)
