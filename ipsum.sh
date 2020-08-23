@@ -81,6 +81,8 @@ iptables -I INPUT -s 185.200.118.83 -j logdrop; iptables -I FORWARD -s 185.200.1
 
 iptables -I INPUT -s 71.6.165.192/26 -j logdrop; iptables -I FORWARD -s 71.6.165.192/26 -j logdrop #(US - CA - entire range)
 iptables -I INPUT -s 146.88.240.0/20 -j logdrop; iptables -I FORWARD -s 146.88.240.0/20 -j logdrop #(US - MI - entire range)
+iptables -I INPUT -s 162.142.125.0/24 -j DROP; iptables -I FORWARD -s 162.142.125.0/24 -j logdrop #(US - MI - entire range)
+iptables -I INPUT -s 192.35.168.0/23 -j DROP; iptables -I FORWARD -s 192.35.168.0/23 -j logdrop #(US - MI - entire range)
 iptables -I INPUT -s 146.88.240.4 -j logdrop; iptables -I FORWARD -s 146.88.240.4 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.22 -j logdrop; iptables -I FORWARD -s 192.35.169.22 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.27 -j logdrop; iptables -I FORWARD -s 192.35.169.27 -j logdrop #(US - MI)
