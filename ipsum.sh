@@ -64,6 +64,7 @@ iptables -I INPUT -s 173.49.229.128 -j logdrop; iptables -I FORWARD -s 173.49.22
 #region OpenVPN Failed connections:
 iptables -I INPUT -s 122.228.19.64/27 -j DROP; iptables -I FORWARD 122.228.19.64/27 -j logdrop #(CN - Entire Range)
 iptables -I INPUT -s 60.190.224.0/19 -j logdrop; iptables -I FORWARD -s 60.190.224.0/19 -j logdrop #(CN - Entire Range)
+iptables -I INPUT -s 164.52.0.0/17 -j logdrop; iptables -I FORWARD -s 164.52.0.0/17 -j logdrop #(CN - entire range)
 iptables -I INPUT -s 185.200.118.0/24 -j logdrop; iptables -I FORWARD -s 185.200.118.0/24 -j logdrop #(UK - London - entire range)
 iptables -I INPUT -s 185.200.118.38 -j logdrop; iptables -I FORWARD -s 185.200.118.38 -j logdrop #(UK - London)
 iptables -I INPUT -s 185.200.118.85 -j logdrop; iptables -I FORWARD -s 185.200.118.85 -j logdrop #(UK - London)

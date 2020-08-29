@@ -44,6 +44,7 @@ sudo iptables -I INPUT -s 173.49.229.128 -j DROP; #(US - VA)
 #region OpenVPN Failed connections:
 sudo iptables -I INPUT -s 60.190.224.0/19 -j DROP; #(CN - Entire Range)
 sudo iptables -I INPUT -s 122.228.19.64/27 -j DROP; #(CN - Entire Range)
+sudo iptables -I INPUT -s 164.52.0.0/17 -j DROP; #(CN - Entire Range)
 sudo iptables -I INPUT -s 185.200.118.0/24 -j DROP; #(UK - London - entire range)
 sudo iptables -I INPUT -s 146.88.240.0/20 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 192.35.168.0/23 -j DROP; #(US - MI - entire range)
