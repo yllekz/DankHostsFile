@@ -7,18 +7,7 @@ echo "Removing previous entries first..."
 ###Start of entry removals below:
 
 #region Purge INPUT table:
-#Purge existing Input table (keep the first entries (the two header lines))
-#Harmless if the list is default (aka 2 lines)
-blocked=`sudo iptables -vnL INPUT --line-numbers | wc -l`
-subtraction=$((blocked-2))
-
-#Ranged for loops are screwy in busybox:
-#https://microdevsys.com/wp/how-to-create-a-for-loop-to-print-a-sequence-or-range-of-numbers-on-dd-wrt-or-busybox-devices-linux/
-#https://www.linuxquestions.org/questions/programming-9/print-1-to-100-in-a-shell-script-680052/
-for i in `seq 1 $subtraction`;
-    #do echo "Removal ${i} of ${subtraction}";
-    do sudo iptables -D INPUT 1; #Delete line 1 x amount of times
-done;
+iptables -F INPUT
 #endregion
 
 #End of entry removals
@@ -50,7 +39,6 @@ sudo iptables -I INPUT -s 146.88.240.0/20 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 192.35.168.0/23 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 162.142.125.0/24 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 66.240.192.128/26 -j DROP; #(US - CA - entire range)
-
 #endregion
 
 #region Caught in router syslogs:
@@ -130,7 +118,6 @@ sudo iptables -I INPUT -s 89.132.0.0/14 -j DROP;
 
 #ipsum list:
 for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt 2>/dev/null | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
-    #do echo $ip; done #Confirm first
     do sudo iptables -I INPUT -s $ip -j DROP;
 done;
 #endregion
