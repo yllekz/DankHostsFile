@@ -62,7 +62,7 @@ iptables -I INPUT -s 173.49.229.128 -j logdrop; iptables -I FORWARD -s 173.49.22
 #endregion
 
 #region OpenVPN Failed connections:
-iptables -I INPUT -s 122.228.19.64/27 -j DROP; iptables -I FORWARD 122.228.19.64/27 -j logdrop #(CN - Entire Range)
+iptables -I INPUT -s 122.228.19.64/27 -j logdrop; iptables -I FORWARD 122.228.19.64/27 -j logdrop #(CN - Entire Range)
 iptables -I INPUT -s 60.190.224.0/19 -j logdrop; iptables -I FORWARD -s 60.190.224.0/19 -j logdrop #(CN - Entire Range)
 iptables -I INPUT -s 164.52.0.0/17 -j logdrop; iptables -I FORWARD -s 164.52.0.0/17 -j logdrop #(CN - entire range)
 iptables -I INPUT -s 185.200.118.0/24 -j logdrop; iptables -I FORWARD -s 185.200.118.0/24 -j logdrop #(UK - London - entire range)
@@ -82,9 +82,9 @@ iptables -I INPUT -s 185.200.118.83 -j logdrop; iptables -I FORWARD -s 185.200.1
 
 iptables -I INPUT -s 71.6.165.192/26 -j logdrop; iptables -I FORWARD -s 71.6.165.192/26 -j logdrop #(US - CA - entire range)
 iptables -I INPUT -s 146.88.240.0/20 -j logdrop; iptables -I FORWARD -s 146.88.240.0/20 -j logdrop #(US - MI - entire range)
-iptables -I INPUT -s 162.142.125.0/24 -j DROP; iptables -I FORWARD -s 162.142.125.0/24 -j logdrop #(US - MI - entire range)
-iptables -I INPUT -s 192.35.168.0/23 -j DROP; iptables -I FORWARD -s 192.35.168.0/23 -j logdrop #(US - MI - entire range)
-iptables -I INPUT -s 66.240.192.128/26 -j DROP; iptables -I FORWARD -s 66.240.192.128/26 -j logdrop #(US - CA - entire range)
+iptables -I INPUT -s 162.142.125.0/24 -j logdrop; iptables -I FORWARD -s 162.142.125.0/24 -j logdrop #(US - MI - entire range)
+iptables -I INPUT -s 192.35.168.0/23 -j logdrop; iptables -I FORWARD -s 192.35.168.0/23 -j logdrop #(US - MI - entire range)
+iptables -I INPUT -s 66.240.192.128/26 -j logdrop; iptables -I FORWARD -s 66.240.192.128/26 -j logdrop #(US - CA - entire range)
 iptables -I INPUT -s 146.88.240.4 -j logdrop; iptables -I FORWARD -s 146.88.240.4 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.22 -j logdrop; iptables -I FORWARD -s 192.35.169.22 -j logdrop #(US - MI)
 iptables -I INPUT -s 192.35.169.27 -j logdrop; iptables -I FORWARD -s 192.35.169.27 -j logdrop #(US - MI)
