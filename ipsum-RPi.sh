@@ -122,6 +122,12 @@ for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/m
 done;
 #endregion
 
+#Country blacklist:
+for ip in $(curl --compressed https://raw.githubusercontent.com/yllekz/DankHostsFile/master/CountryBlacklist.txt 2>/dev/null | grep -v "#" | grep -v -E "\s[1-2]$" | cut -f 1);
+    do sudo iptables -I INPUT -s $ip -j DROP;
+done;
+#endregion
+
 echo $(date)
 
 ###End of entry additions
