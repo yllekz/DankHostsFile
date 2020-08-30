@@ -7,7 +7,7 @@ echo "Removing previous entries first..."
 ###Start of entry removals below:
 
 #region Purge INPUT table:
-iptables -F INPUT
+sudo iptables -F INPUT
 #endregion
 
 #End of entry removals
@@ -128,5 +128,5 @@ echo $(date)
 #endregion
 
 ####Display for confirmation:
-#sudo iptables -vnL INPUT --line-numbers
+#sudo iptables -vnL INPUT --line-numbers|more
 #sudo iptables -vnL INPUT --line-number | sort -r -g -k 2 | more
