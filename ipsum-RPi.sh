@@ -49,6 +49,7 @@ sudo iptables -I INPUT -s 185.200.118.0/24 -j DROP; #(UK - London - entire range
 sudo iptables -I INPUT -s 146.88.240.0/20 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 192.35.168.0/23 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 162.142.125.0/24 -j DROP; #(US - MI - entire range)
+sudo iptables -I INPUT -s 66.240.192.128/26 -j DROP; #(US - CA - entire range)
 
 #endregion
 
