@@ -34,11 +34,14 @@ sudo iptables -I INPUT -s 173.49.229.128 -j DROP; #(US - VA)
 sudo iptables -I INPUT -s 60.190.224.0/19 -j DROP; #(CN - Entire Range)
 sudo iptables -I INPUT -s 122.228.19.64/27 -j DROP; #(CN - Entire Range)
 sudo iptables -I INPUT -s 164.52.0.0/17 -j DROP; #(CN - Entire Range)
+sudo iptables -I INPUT -s 183.129.159.240/29 -j DROP; #(CN - Entire Range)
 sudo iptables -I INPUT -s 185.200.118.0/24 -j DROP; #(UK - London - entire range)
 sudo iptables -I INPUT -s 146.88.240.0/20 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 192.35.168.0/23 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 162.142.125.0/24 -j DROP; #(US - MI - entire range)
 sudo iptables -I INPUT -s 66.240.192.128/26 -j DROP; #(US - CA - entire range)
+sudo iptables -I INPUT -s 185.142.236.0/24 -j DROP; #(Netherlands - entire range)
+sudo iptables -I INPUT -s 80.82.77.0/24 -j DROP; #(Netherlands - entire range)
 #endregion
 
 #region Caught in router syslogs:
