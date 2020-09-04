@@ -1,18 +1,13 @@
 #!/bin/bash
 
 #region Remove first:
-
-echo $(date) #Command takes about 20 minutes to fully process
-echo "Removing previous entries first..."
-###Start of entry removals below:
-
+echo $(date);echo "Removing previous entries first...";
 #Purge INPUT table:
-sudo iptables -F INPUT
+sudo iptables -F INPUT;
 #endregion
 
 #region Now add entries:
-echo $(date)
-echo "Adding entries to iptables..."
+echo $(date);echo "Adding entries to iptables...";
 
 #Custom entries SK
 for ip in $(curl --compressed https://raw.githubusercontent.com/yllekz/DankHostsFile/master/IPBanList.txt 2>/dev/null | grep -v "#");
@@ -25,12 +20,12 @@ for ip in $(curl --compressed https://raw.githubusercontent.com/stamparm/ipsum/m
 done;
 
 #Country blacklist:
-for ip in $(curl --compressed https://raw.githubusercontent.com/yllekz/DankHostsFile/master/CountryBlacklist.txt 2>/dev/null | grep -v "#");
-    do sudo iptables -I INPUT -s $ip -j DROP;
-done;
+#for ip in $(curl --compressed https://raw.githubusercontent.com/yllekz/DankHostsFile/master/CountryBlacklist.txt 2>/dev/null | grep -v "#");
+#    do sudo iptables -I INPUT -s $ip -j DROP;
+#done;
 #endregion end of entry additions
 
-echo $(date)
+echo $(date);
 
 ####Display for confirmation:
 #sudo iptables -vnL INPUT --line-numbers|more

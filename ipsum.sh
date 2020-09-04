@@ -2,15 +2,14 @@
 
 #region Remove first:
 
-echo $(date) #Command takes about 20 minutes to fully process
-echo "Removing previous entries first..."
+echo $(date);echo "Removing previous entries first...";
 ###Start of entry removals below:
 
 #region Purge FORWARD table
 #Purge existing Input table (keep the last 22 entries (20 entries + the two header lines), as those are placed there by default and we insert blocked entries before/above them)
 #Harmless if the list is default (aka 22 lines)
-blocked=`iptables -vnL FORWARD --line-numbers | wc -l`
-subtraction=$((blocked-22))
+blocked=`iptables -vnL FORWARD --line-numbers | wc -l`;
+subtraction=$((blocked-22));
 
 #Ranged for loops are screwy in busybox:
 #https://microdevsys.com/wp/how-to-create-a-for-loop-to-print-a-sequence-or-range-of-numbers-on-dd-wrt-or-busybox-devices-linux/
@@ -24,8 +23,8 @@ done;
 #region Purge INPUT table:
 #Purge existing Input table (keep the last 14 entries (12 entries + the two header lines), as those are placed there by default and we insert blocked entries before/above them)
 #Harmless if the list is default (aka 14 lines)
-blocked=`iptables -vnL INPUT --line-numbers | wc -l`
-subtraction=$((blocked-14))
+blocked=`iptables -vnL INPUT --line-numbers | wc -l`;
+subtraction=$((blocked-14));
 
 #Ranged for loops are screwy in busybox:
 #https://microdevsys.com/wp/how-to-create-a-for-loop-to-print-a-sequence-or-range-of-numbers-on-dd-wrt-or-busybox-devices-linux/
@@ -37,14 +36,13 @@ done;
 #endregion
 
 #Purge existing Output table (harmless if the list is already blank)
-iptables -F OUTPUT
+iptables -F OUTPUT;
 
 #End of entry removals
 #endregion
 
 #region Now add entries:
-echo $(date)
-echo "Adding entries to iptables..."
+echo $(date);echo "Adding entries to iptables...";
 
 #region Custom Entries SK
 wget -O /tmp/root/IPBanList.txt https://raw.githubusercontent.com/yllekz/DankHostsFile/master/IPBanList.txt
@@ -69,7 +67,7 @@ for ip in $(cat /tmp/root/ipsum.txt | grep -v "#" | grep -v -E "\s[1-2]$" | cut 
     do iptables -I FORWARD -s $ip -j DROP; done;
 #endregion
 
-echo $(date)
+echo $(date);
 
 #endregion End of entry additions
 
