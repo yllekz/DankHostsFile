@@ -8,6 +8,7 @@
 10.0.0.7	LilNASX
 10.0.0.8	7SirelleFront
 10.0.0.9	7SirellePorch
+10.0.0.10   PiCam
 
 # 2 Lanc names
 10.1.0.1	2Lanc
@@ -16,6 +17,7 @@
 10.1.0.6	TwoLancNAS
 10.1.0.5	2LancLorexOutdoor
 10.1.0.4	2LancLorexIndoorUSB
+10.4.0.106  Basement-4600
 
 # 4 Lanc names
 10.4.0.1	LancLand
@@ -24,6 +26,7 @@
 10.4.0.4	4LancLorex
 10.4.0.5    Kitchen-3847
 10.4.0.7	FourLancNAS
+10.1.0.113  STKELLY4-LAP
 
 #Begin custom entries:
 
@@ -45,7 +48,7 @@
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
 172.217.12.132 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
-0.0.0.0 alb.reddit.com # Reddit ads                         #MSN Bing ad server observed by Wireshark SK 2020-01-01
+0.0.0.0 alb.reddit.coming                                   #Reddit ads/MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 a23-63-77-136.deploy.static.akamaitechnologies.com  #MSN Bing ad server observed by Wireshark SK 2020-01-01
@@ -56,7 +59,7 @@
 
 #Various Win10 Telemetry blocks:
 #Via https://github.com/W4RH4WK/Debloat-Windows-10/tree/master/scripts
-#Last updated 2/17/2018
+#https://betanews.com/2020/08/04/windows-10-telemetry-hosts-file-hijack-warning/
 #These entries should be unique/not appear anywhere else in this file.
 
 0.0.0.0 184-86-53-99.deploy.static.akamaitechnologies.com
@@ -69,6 +72,7 @@
 0.0.0.0 a-0007.a-msedge.net
 0.0.0.0 a-0008.a-msedge.net
 0.0.0.0 a-0009.a-msedge.net
+0.0.0.0 msedge.net
 0.0.0.0 a1621.g.akamai.net
 0.0.0.0 a1856.g2.akamai.net
 0.0.0.0 a1961.g.akamai.net
@@ -85,7 +89,6 @@
 0.0.0.0 corpext.msitadfs.glbdns2.microsoft.com
 0.0.0.0 corp.sts.microsoft.com
 0.0.0.0 cs1.wpc.v0cdn.net
-0.0.0.0 df.telemetry.microsoft.com
 0.0.0.0 diagnostics.support.microsoft.com
 0.0.0.0 e2835.dspb.akamaiedge.net
 0.0.0.0 e7341.g.akamaiedge.net
@@ -99,46 +102,45 @@
 0.0.0.0 i1.services.social.microsoft.com.nsatc.net
 0.0.0.0 ipv6.msftncsi.com
 0.0.0.0 ipv6.msftncsi.com.edgesuite.net
-0.0.0.0 msedge.net
 0.0.0.0 msftncsi.com
 0.0.0.0 oca.telemetry.microsoft.com
 0.0.0.0 oca.telemetry.microsoft.com.nsatc.net
+0.0.0.0 df.telemetry.microsoft.com
+0.0.0.0 services.wes.df.telemetry.microsoft.com
+0.0.0.0 sqm.df.telemetry.microsoft.com
+0.0.0.0 sqm.telemetry.microsoft.com.nsatc.net
+0.0.0.0 telecommand.telemetry.microsoft.com.nsatc.net
+0.0.0.0 telemetry.microsoft.com
+0.0.0.0 telemetry.appex.bing.net:443
+0.0.0.0 telemetry.remoteapp.windowsazure.com
 0.0.0.0 onesettings-db5.metron.live.nsatc.net
 0.0.0.0 pre.footprintpredict.com
 0.0.0.0 redir.metaservices.microsoft.com
-0.0.0.0 services.wes.df.telemetry.microsoft.com
 0.0.0.0 settings-sandbox.data.microsoft.com
 0.0.0.0 sls.update.microsoft.com.akadns.net
-0.0.0.0 sqm.df.telemetry.microsoft.com
-0.0.0.0 sqm.telemetry.microsoft.com.nsatc.net
 0.0.0.0 ssw.live.com
 0.0.0.0 statsfe1.ws.microsoft.com
 0.0.0.0 statsfe2.update.microsoft.com.akadns.net
-0.0.0.0 telecommand.telemetry.microsoft.com.nsatc.net
-0.0.0.0 telemetry.appex.bing.net:443
-0.0.0.0 telemetry.microsoft.com
-0.0.0.0 telemetry.urs.microsoft.com
 0.0.0.0 vortex.data.microsoft.com
 0.0.0.0 vortex-sandbox.data.microsoft.com
 0.0.0.0 cy2.vortex.data.microsoft.com.akadns.net
-0.0.0.0 watson.live.com
-0.0.0.0 watson.microsoft.com
-0.0.0.0 0.0.0.0 win10.ipv6.microsoft.com
+0.0.0.0 win10.ipv6.microsoft.com
 0.0.0.0 www.bingads.microsoft.com
 0.0.0.0 www.go.microsoft.akadns.net
 0.0.0.0 www.msftncsi.com
+0.0.0.0 v10-win.vortex.data.microsoft.com.akadns.net
+0.0.0.0 us.vortex-win.data.microsoft.com
+0.0.0.0 us-v10.events.data.microsoft.com
+0.0.0.0 urs.microsoft.com.nsatc.net
+0.0.0.0 wns.notify.windows.com.akadns.net
+
 
 # extra
 0.0.0.0 fe2.update.microsoft.com.akadns.net
-0.0.0.0 statsfe2.update.microsoft.com.akadns.net,
 0.0.0.0 survey.watson.microsoft.com
-0.0.0.0 watson.microsoft.com,
-0.0.0.0 watson.ppe.telemetry.microsoft.com
-0.0.0.0 watson.telemetry.microsoft.com.nsatc.net
-#0.0.0.0 ui.skype.com, # can cause issues with Skype
+#0.0.0.0 ui.skype.com # can cause issues with Skype
 #0.0.0.0 pricelist.skype.com   # can cause issues with Skype
 #0.0.0.0 apps.skype.com# can cause issues with Skype
-0.0.0.0 m.hotmail.com
 #0.0.0.0 s.gateway.messenger.live.com  # can cause issues with Skype
 
 #region########################################################################################################################################
@@ -179,28 +181,26 @@
 0.0.0.0	df.telemetry.microsoft.com
 0.0.0.0	oca.telemetry.microsoft.com
 0.0.0.0	oca.telemetry.microsoft.com.nsatc.net
-0.0.0.0	redir.metaservices.microsoft.com
 0.0.0.0	reports.wes.df.telemetry.microsoft.com
 0.0.0.0	services.wes.df.telemetry.microsoft.com
-0.0.0.0	settings-sandbox.data.microsoft.com
-0.0.0.0	settings-win.data.microsoft.com
+0.0.0.0	ca.telemetry.microsoft.com
 0.0.0.0	sqm.df.telemetry.microsoft.com
 0.0.0.0	sqm.telemetry.microsoft.com
 0.0.0.0	sqm.telemetry.microsoft.com.nsatc.net
 0.0.0.0	telecommand.telemetry.microsoft.com
 0.0.0.0	telecommand.telemetry.microsoft.com.nsatc.net
-0.0.0.0	telemetry.appex.bing.net
 0.0.0.0	telemetry.microsoft.com
-0.0.0.0	telemetry.urs.microsoft.com
-0.0.0.0	vortex-sandbox.data.microsoft.com
-0.0.0.0	vortex-win.data.microsoft.com
-0.0.0.0	vortex.data.microsoft.com
 0.0.0.0	watson.telemetry.microsoft.com
 0.0.0.0	watson.telemetry.microsoft.com.nsatc.net
 0.0.0.0	watson.ppe.telemetry.microsoft.com
 0.0.0.0	wes.df.telemetry.microsoft.com
-#0.0.0.0	vortex-bn2.metron.live.com.nsatc.net #Redundant with below
-#0.0.0.0	vortex-cy2.metron.live.com.nsatc.net #Redundant with below
+0.0.0.0	telemetry.urs.microsoft.com
+0.0.0.0	telemetry.appex.bing.net
+0.0.0.0	settings-sandbox.data.microsoft.com
+0.0.0.0	settings-win.data.microsoft.com
+0.0.0.0	vortex-sandbox.data.microsoft.com
+0.0.0.0	vortex-win.data.microsoft.com
+0.0.0.0	vortex.data.microsoft.com
 0.0.0.0	watson.live.com
 0.0.0.0	watson.microsoft.com
 0.0.0.0	feedback.search.microsoft.com
@@ -211,10 +211,11 @@
 0.0.0.0	i1.services.social.microsoft.com.nsatc.net
 0.0.0.0	vortex-bn2.metron.live.com.nsatc.net
 0.0.0.0	vortex-cy2.metron.live.com.nsatc.net
-0.0.0.0	ca.telemetry.microsoft.com
 0.0.0.0	cache.datamart.windows.com
 0.0.0.0	spynet2.microsoft.com
 0.0.0.0	spynetalt.microsoft.com
+0.0.0.0	redir.metaservices.microsoft.com
+
 # End of entries inserted by Spybot Anti-Beacon for Windows 10
 
 #region########################################################################################################################################
