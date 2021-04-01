@@ -18,6 +18,7 @@
 10.1.0.5	2LancLorexOutdoor
 10.1.0.4	2LancLorexIndoorUSB
 10.4.0.106  Basement-4600
+10.1.0.113  STKELLY4-LAP
 
 # 4 Lanc names
 10.4.0.1	LancLand
@@ -26,6 +27,7 @@
 10.4.0.4	4LancLorex
 10.4.0.5    Kitchen-3847
 10.4.0.7	FourLancNAS
+10.4.0.106  Basement-4600
 10.1.0.113  STKELLY4-LAP
 
 #Begin custom entries:
