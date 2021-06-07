@@ -1,4 +1,8 @@
-#Build my hosts file
+# Build my hosts file. Pulls from: 
+# 1. My own custom entries [in this repo]
+# 2. Spybot S+D Immunization Entries [in this repo]
+# 3. StevenBlack Hosts [pull from his GitHub]
+# 4. Exceptions [defined in this file below]
 
 $HostsFile = "c:\users\$($env:USERNAME)\Desktop\hosts.txt"
 
