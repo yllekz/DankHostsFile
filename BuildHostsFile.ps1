@@ -3,6 +3,7 @@
 # 2. Spybot S+D Immunization Entries [in this repo]
 # 3. StevenBlack Hosts [pull from his GitHub]
 # 4. Exceptions [defined in this file below]
+# 5. YouTube ad list [pull from their GitHub]
 
 $HostsFile = "c:\users\$($env:USERNAME)\Desktop\hosts.txt"
 
@@ -18,6 +19,7 @@ $HostsFileContent += "# Start of StevenBlack Hosts"
 $HostsFileContent += "# A select few entries have been unblocked to ensure sites like Hulu work."
 
 $StevenBlackHosts = (invoke-webrequest "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")
+$YouTubeAds = (Invoke-WebRequest "https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt")
 
 #$NoDupe = $StevenBlackHosts.rawcontent
 #$Dedupe = $StevenBlackHosts.rawcontent | Sort-Object | get-unique
@@ -124,5 +126,10 @@ $13 = $12.replace($Exceptions[12].Entry, "#$($Exceptions[12].Entry) $($Exception
 $13|out-file $HostsFile
 
 "# End of entries inserted by StevenBlack hosts ########################################################################################################################################"|out-file $HostsFile -Append
+
+$HostsFileContent += "#region########################################################################################################################################"
+$HostsFileContent += "# Start of YouTube ad server list"
+$HostsFileContent += $YouTubeAds.Content
+"# End of entries inserted by YouTube ad server list ########################################################################################################################################"|out-file $HostsFile -Append
 
 #endregion
