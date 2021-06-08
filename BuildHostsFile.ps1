@@ -127,9 +127,11 @@ $13|out-file $HostsFile
 
 "# End of entries inserted by StevenBlack hosts ########################################################################################################################################"|out-file $HostsFile -Append
 
-$HostsFileContent += "#region########################################################################################################################################"
-$HostsFileContent += "# Start of YouTube ad server list"
-$HostsFileContent += $YouTubeAds.Content
+"#region########################################################################################################################################" |out-file $HostsFile -Append
+"# Start of YouTube ad server list" |out-file $HostsFile -Append
+foreach($line in $YouTubeAds.Content){
+    "0.0.0.0 $($line)" |out-file $HostsFile -Append
+}
 "# End of entries inserted by YouTube ad server list ########################################################################################################################################"|out-file $HostsFile -Append
 
 #endregion
