@@ -4,12 +4,13 @@
 10.0.0.1	WiFight Club
 10.0.0.3	JenPC
 10.0.0.4    Smudger
-10.0.0.5	Battlebot
+10.0.0.5	Diesel
 10.0.0.6	EcksBocksTreeSitty
 10.0.0.7	LilNASX
 10.0.0.8	7SirelleFront
 10.0.0.9	7SirellePorch
 10.0.0.10   PiCam
+10.0.0.11   Denon
 
 # 2 Lanc names
 10.1.0.1	2Lanc
