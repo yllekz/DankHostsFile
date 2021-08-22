@@ -83,7 +83,6 @@
 0.0.0.0 ac3.msn.com
 0.0.0.0 a-msedge.net
 0.0.0.0 any.edge.bing.com
-0.0.0.0 bingads.microsoft.com
 0.0.0.0 choice.microsoft.com
 0.0.0.0 choice.microsoft.com.nsatc.net
 #0.0.0.0 c.msn.com # can cause issues with Skype
