@@ -49,7 +49,7 @@
 
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
-172.217.12.132 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
+172.217.12.206 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
 0.0.0.0 alb.reddit.coming                                   #Reddit ads/MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
