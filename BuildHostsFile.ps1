@@ -105,9 +105,15 @@ $row = new-object PSObject -Property @{
     'Comment'   = "#Unblocked SK 2020/05/26 [BeachBody]";
 }
 $Exceptions += $row
+
+$row = new-object PSObject -Property @{
+    'Entry'     = "0.0.0.0 partnerad.l.doubleclick.net";
+    'Comment'   = "#Unblocked SK 2021/10/26 [Paramount+]";
+}
+$Exceptions += $row
 #endregion
 
-#Comment out exceptions from above list. TODO: Figure out a way to make this into a loop...
+#region Comment out exceptions from above list. TODO: Figure out a way to make this into a loop...
 $HostsFileContent += $StevenBlackHosts.Content
 
 $1 = $HostsFileContent.replace($Exceptions[0].Entry, "#$($Exceptions[0].Entry) $($Exceptions[0].Comment)")
@@ -123,7 +129,9 @@ $10 = $9.replace($Exceptions[9].Entry, "#$($Exceptions[9].Entry) $($Exceptions[9
 $11 = $10.replace($Exceptions[10].Entry, "#$($Exceptions[10].Entry) $($Exceptions[10].Comment)")
 $12 = $11.replace($Exceptions[11].Entry, "#$($Exceptions[11].Entry) $($Exceptions[11].Comment)")
 $13 = $12.replace($Exceptions[12].Entry, "#$($Exceptions[12].Entry) $($Exceptions[12].Comment)")
-$13|out-file $HostsFile
+$14 = $13.replace($Exceptions[13].Entry, "#$($Exceptions[13].Entry) $($Exceptions[13].Comment)")
+$14|out-file $HostsFile
+#endregion
 
 "# End of entries inserted by StevenBlack hosts ########################################################################################################################################"|out-file $HostsFile -Append
 
