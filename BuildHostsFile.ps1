@@ -5,14 +5,26 @@
 # 4. Exceptions [defined in this file below]
 # 5. YouTube ad list [pull from their GitHub]
 
-$HostsFile = "c:\users\$($env:USERNAME)\Desktop\hosts.txt"
+if($IsLinux -eq $true){
+    $HostsFile = "$($HOME)/Desktop/hosts.txt"
+    $CustomEntriesFile = "$($PSSCRIPTROOT)/CustomEntriesSK.txt"
+    $SpybotEntriesFile = "$($PSSCRIPTROOT)/SpybotEntries.txt"
+}elseif($IsMacOS -eq $true ){
+    $HostsFile = "$($HOME)/Desktop/hosts.txt"
+    $CustomEntriesFile = "$($PSSCRIPTROOT)/CustomEntriesSK.txt"
+    $SpybotEntriesFile = "$($PSSCRIPTROOT)/SpybotEntries.txt"
+}else{
+    $HostsFile = "c:\users\$($env:USERNAME)\Desktop\hosts.txt"
+    $CustomEntriesFile = "$($PSSCRIPTROOT)\CustomEntriesSK.txt"
+    $SpybotEntriesFile = "$($PSSCRIPTROOT)\SpybotEntries.txt"
+}
 
 #region Put the hosts file together:
 
 $HostsFileContent = @()
 
-$HostsFileContent += Get-Content "$($PSSCRIPTROOT)\CustomEntriesSK.txt"
-$HostsFileContent += Get-Content "$($PSSCRIPTROOT)\SpybotEntries.txt"
+$HostsFileContent += Get-Content $CustomEntriesFile
+$HostsFileContent += Get-Content $SpybotEntriesFile
 
 $HostsFileContent += "#region########################################################################################################################################"
 $HostsFileContent += "# Start of StevenBlack Hosts"
@@ -20,6 +32,8 @@ $HostsFileContent += "# A select few entries have been unblocked to ensure sites
 
 $StevenBlackHosts = (invoke-webrequest "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")
 $YouTubeAds = (Invoke-WebRequest "https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt")
+$SmartTV1 = (Invoke-WebRequest "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt")
+$SmartTV2 = (Invoke-WebRequest "https://raw.githubusercontent.com/tarvcode/pihole-smart-tv/main/pihole-smart-tv.txt")
 
 #$NoDupe = $StevenBlackHosts.rawcontent
 #$Dedupe = $StevenBlackHosts.rawcontent | Sort-Object | get-unique
@@ -30,85 +44,85 @@ $Exceptions = @()
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 cws.conviva.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 www.cws.conviva.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 zee.cws.conviva.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 www.zee.cws.conviva.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 chartbeat.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 ping.chartbeat.net";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 static.chartbeat.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 www.chartbeat.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 adsapi.chartbeat.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 bat.bing.com";
-    'Comment'   = "#Unblocked SK 2020/03/15";
+    'Comment'   = "#Unblocked SK 2020/03/15";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 metrics.beachbody.com";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 chartbeat.net";
-    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/03/15 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 metrics.teambeachbody.com";
-    'Comment'   = "#Unblocked SK 2020/05/26 [BeachBody]";
+    'Comment'   = "#Unblocked SK 2020/05/26 [BeachBody]";
 }
 $Exceptions += $row
 
 $row = new-object PSObject -Property @{
     'Entry'     = "0.0.0.0 partnerad.l.doubleclick.net";
-    'Comment'   = "#Unblocked SK 2021/10/26 [Paramount+]";
+    'Comment'   = "#Unblocked SK 2021/10/26 [Paramount+]";
 }
 $Exceptions += $row
 #endregion
@@ -139,10 +153,36 @@ $14|out-file $HostsFile
 <# "#region########################################################################################################################################" |out-file $HostsFile -Append
 "# Start of YouTube ad server list" |out-file $HostsFile -Append
 foreach($line in $YouTubeAds.Content){
-    "0.0.0.0 $($line)" |out-file $HostsFile -Append
+    if($line -match "#"){
+        $line | out-file $HostsFile -Append
+    }else{
+        "0.0.0.0 $($line)" | out-file $HostsFile -Append
+    }
 }
 "# End of entries inserted by YouTube ad server list ########################################################################################################################################"|out-file $HostsFile -Append
  #>
+#endregion
+
+#region Smart TVs (some are shared between the two but each contain some unique/exclusive entries)
+"#region########################################################################################################################################" |out-file $HostsFile -Append
+"# Start of Smart TV server list" |out-file $HostsFile -Append
+foreach($line in $SmartTV1.Content){
+    if($line -match "#"){
+        $line | out-file $HostsFile -Append
+    }else{
+        "0.0.0.0 $($line)" | out-file $HostsFile -Append
+    }
+}
+
+foreach($line in $SmartTV2.Content){
+    if($line -match "#"){
+        $line | out-file $HostsFile -Append
+    }else{
+        "0.0.0.0 $($line)" | out-file $HostsFile -Append
+    }
+}
+"# End of entries inserted by Smart TV server list ########################################################################################################################################"|out-file $HostsFile -Append
+
 #endregion
 
 #endregion

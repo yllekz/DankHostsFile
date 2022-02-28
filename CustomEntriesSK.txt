@@ -19,7 +19,6 @@
 10.1.0.4	2LancLorexIndoorUSB
 10.1.0.5	2LancLorexOutdoor
 10.1.0.6	TwoLancNAS
-10.1.0.113  STKELLY4-LAP
 
 # 4 Lanc names
 10.4.0.1	LancLand
@@ -28,7 +27,6 @@
 10.4.0.4	4LancLorex
 10.4.0.5    Kitchen-3847
 10.4.0.7	FourLancNAS
-10.4.0.106  Basement-4600
 
 #Begin custom entries:
 
@@ -49,13 +47,23 @@
 
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
-172.217.12.206 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
+142.250.65.238 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
 0.0.0.0 alb.reddit.coming                                   #Reddit ads/MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 a23-63-77-136.deploy.static.akamaitechnologies.com  #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 120-52-protection.greywizard.net                    #Weird Poland-based server (185.66.120.52/corneey.com) coming in via Coini banner Ads observed by Wireshark SK 2020-01-01
 0.0.0.0 corneey.com                                         #Weird Poland-based server (185.66.120.52/corneey.com) coming in via Coini banner Ads observed by Wireshark SK 2020-01-01
+0.0.0.0 analytics.oneplus.cn                                #Pi-hole observation SK 2022-02-27
+0.0.0.0 analytics.samsungknox.com                           #Pi-hole observation SK 2022-02-27
+0.0.0.0 ads-sg.tiktok.com                                   #Pi-hole observation SK 2022-02-27
+0.0.0.0 app.chat.xiaomi.net                                 #Pi-hole observation SK 2022-02-27
+0.0.0.0 samsungadhub.com                                    #Pi-hole observation SK 2022-02-27
+0.0.0.0 px4.ads.linkedin.com                                #Pi-hole observation SK 2022-02-27
+0.0.0.0 widgets.pinterest.com                               #Pi-hole observation SK 2022-02-27
+0.0.0.0 extmaps-api.yandex.net                              #Pi-hole observation SK 2022-02-27
+0.0.0.0 appmetrica.yandex.com                               #Pi-hole observation SK 2022-02-27
+0.0.0.0 mqtt.kerberos.io                                    #Block Kerberos.io analytics SK 2022-02-27
 
 #region########################################################################################################################################
 
