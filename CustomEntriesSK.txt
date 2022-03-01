@@ -13,12 +13,13 @@
 10.7.0.11   Denon
 
 # 2 Lanc names
-10.1.0.1	2Lanc
+10.1.0.1	2Lanc-Basement
 10.1.0.2	2LancLorexIndoor
 10.1.0.3	2Lanc2824
 10.1.0.4	2LancLorexIndoorUSB
 10.1.0.5	2LancLorexOutdoor
 10.1.0.6	TwoLancNAS
+10.1.0.7	2LancUpstairsWifi
 
 # 4 Lanc names
 10.4.0.1	LancLand
