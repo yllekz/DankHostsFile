@@ -65,6 +65,9 @@
 0.0.0.0 extmaps-api.yandex.net                              #Pi-hole observation SK 2022-02-27
 0.0.0.0 appmetrica.yandex.com                               #Pi-hole observation SK 2022-02-27
 0.0.0.0 mqtt.kerberos.io                                    #Block Kerberos.io analytics SK 2022-02-27
+0.0.0.0 analyticsengine.s3.amazonaws.com                    #Suggested by d3ward.github.io SK 2022-03-06
+0.0.0.0 advertising-api-eu.amazon.com                       #Suggested by d3ward.github.io SK 2022-03-06
+0.0.0.0 affiliationjs.s3.amazonaws.com                      #Suggested by d3ward.github.io SK 2022-03-06
 
 #region########################################################################################################################################
 
