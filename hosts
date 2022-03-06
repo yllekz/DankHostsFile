@@ -1,7 +1,7 @@
 127.0.0.1	localhost
 
 #7 Sirelle names
-10.7.0.1	WiFight Club
+10.7.0.1	WiFight-Club
 10.7.0.3	JenPC
 10.7.0.4    Smudger
 10.7.0.5	Diesel
@@ -48,7 +48,7 @@
 
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
-172.217.12.206 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
+142.251.40.206 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
 0.0.0.0 alb.reddit.coming                                   #Reddit ads/MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
@@ -65,6 +65,9 @@
 0.0.0.0 extmaps-api.yandex.net                              #Pi-hole observation SK 2022-02-27
 0.0.0.0 appmetrica.yandex.com                               #Pi-hole observation SK 2022-02-27
 0.0.0.0 mqtt.kerberos.io                                    #Block Kerberos.io analytics SK 2022-02-27
+0.0.0.0 analyticsengine.s3.amazonaws.com                    #Suggested by d3ward.github.io SK 2022-03-06
+0.0.0.0 advertising-api-eu.amazon.com                       #Suggested by d3ward.github.io SK 2022-03-06
+0.0.0.0 affiliationjs.s3.amazonaws.com                      #Suggested by d3ward.github.io SK 2022-03-06
 
 #region########################################################################################################################################
 
@@ -49149,14 +49152,14 @@
 
 
 # You are free to copy and distribute this file for non-commercial uses,
-# as long the original URL and attribution is included. 
+# as long the original URL and attribution is included.
 
 # Please forward any additions, corrections or comments by logging an issue at
 # https://github.com/mitchellkrogza/Badd-Boyz-Hosts/issues
 
 # This list of hosts is compiled from server logs on my own servers
 # and forms the basis of the bad referrers domain lists for
-# The Nginx Ultimate Bad Bot Blocker at: 
+# The Nginx Ultimate Bad Bot Blocker at:
 # https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
 # and the Apache Ultimate Bad Bot Blocker at:
 # https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker
@@ -49167,9 +49170,9 @@
 ##### Version Information ##
 
 # Use this file to prevent your computer or server from connecting to selected
-# internet hosts. This is an easy and effective way to protect you from 
-# many types of spyware, adware, malware, click-jacking and porn sites and reduces 
-# bandwidth use. 
+# internet hosts. This is an easy and effective way to protect you from
+# many types of spyware, adware, malware, click-jacking and porn sites and reduces
+# bandwidth use.
 
 # The file should be named "hosts" NOT "hosts.txt"
 
@@ -106464,8 +106467,8 @@
 # This hosts file is brought to you by Dan Pollock and can be found at
 # http://someonewhocares.org/hosts/zero/
 # You are free to copy and distribute this file for non-commercial uses,
-# as long the original URL and attribution is included. 
-# 
+# as long the original URL and attribution is included.
+#
 # See below for acknowledgements.
 
 # Please forward any additions, corrections or comments by email to
@@ -106474,17 +106477,17 @@
 # Last updated: Wed, 16 Feb 2022 at 21:11:57 GMT
 
 # Use this file to prevent your computer from connecting to selected
-# internet hosts. This is an easy and effective way to protect you from 
-# many types of spyware, reduces bandwidth use, blocks certain pop-up 
+# internet hosts. This is an easy and effective way to protect you from
+# many types of spyware, reduces bandwidth use, blocks certain pop-up
 # traps, prevents user tracking by way of "web bugs" embedded in spam,
 # provides partial protection to IE from certain web-based exploits and
-# blocks most advertising you would otherwise be subjected to on the 
-# internet. 
+# blocks most advertising you would otherwise be subjected to on the
+# internet.
 
-# There is a version of this file that uses 127.0.0.1 instead of 0.0.0.0 
+# There is a version of this file that uses 127.0.0.1 instead of 0.0.0.0
 # available at http://someonewhocares.org/hosts/.
 # On some machines the zero version may run minutely faster, however it
-# may not be compatible with all systems. 
+# may not be compatible with all systems.
 
 # This file must be saved as a text file with no extension. (This means
 # that the file name should be exactly as below, without a ".txt" appended.)
@@ -106511,7 +106514,7 @@
 # On a Netware system, the location is System\etc\hosts"
 # For Macintosh (pre OS X) place it in the Mac System Folder or Preferences
 #    folder and reboot. (something like HD:System Folder:Preferences:Hosts)
-#    Alternatively you can save it elsewhere on your machine, then go to the 
+#    Alternatively you can save it elsewhere on your machine, then go to the
 #    TCP/IP control panel and click on "Select hosts file" to read it in.
 #    ------------------
 #    | As well, note that the format is different on old macs, so
@@ -106528,12 +106531,6 @@
 # redirecting any requests to that host to your own computer. For example
 # this will prevent your browser from downloading banner ads, or sending
 # your information back to a company.
-
-#<localhost>
-0.0.0.0 fe #00::0 ip6-localnet
-0.0.0.0 ff #00::0 ip6-mcastprefix
-#fe80::1%lo0	localhost
-#</localhost>
 
 #<shock-sites>
 # For example, to block unpleasant pages, try:
@@ -106732,12 +106729,12 @@
 #</shortcut-examples>
 
 #<hijack-sites>
-# The sites ads234.com and ads345.com -- These sites hijack internet explorer 
-# and redirect all requests through their servers. You may need to use spyware 
-# removal programs such as SpyBotS&amp;D, AdAware or HijackThis to remove this 
-# nasty parasite. It's possible that blocking these sites using a hosts file 
+# The sites ads234.com and ads345.com -- These sites hijack internet explorer
+# and redirect all requests through their servers. You may need to use spyware
+# removal programs such as SpyBotS&amp;D, AdAware or HijackThis to remove this
+# nasty parasite. It's possible that blocking these sites using a hosts file
 # may not work, in which case you should remove the following lines from this
-# file and try the tools listed above immediately. Don't forget to reboot 
+# file and try the tools listed above immediately. Don't forget to reboot
 # after a scan.
 0.0.0.0 ads234.com
 0.0.0.0 ads345.com
@@ -106751,9 +106748,9 @@
 # By entering domains here, it will prevent certain companies from
 # gathering information on your surfing habits. These servers do not
 # necessarily serve ads, instead some are used by certain products to
-# "phone home". Others use web cookies to gather statistics on surfing 
-# habits. Among other uses, this is a common tactic by spammers, to 
-# let them know that you have read your mail. 
+# "phone home". Others use web cookies to gather statistics on surfing
+# habits. Among other uses, this is a common tactic by spammers, to
+# let them know that you have read your mail.
 # Uncomment (remove the #) the lines that you wish to block, as some
 # may provide you with services you like.
 
@@ -106761,23 +106758,23 @@
 #0.0.0.0 auto.search.msn.com  # Microsoft uses this server to redirect
                                 # mistyped URLs to search engines. They
                                 # log all such errors.
-#0.0.0.0 sitefinder.verisign.com	# Verisign has joined the game 
+#0.0.0.0 sitefinder.verisign.com	# Verisign has joined the game
 #0.0.0.0 sitefinder-idn.verisign.com	# of trying to hijack mistyped
-					# URLs to their site. 
+					# URLs to their site.
 					# May break iOS Game Center.
 
-#0.0.0.0 s0.2mdn.net		# This may interfere with some streaming 
+#0.0.0.0 s0.2mdn.net		# This may interfere with some streaming
 				# video on sites such as cbc.ca
 #0.0.0.0 ad.doubleclick.net   # This may interefere with www.sears.com
-				# and potentially other sites. 
+				# and potentially other sites.
 0.0.0.0 media.fastclick.net  # Likewise, this may interfere with some
 #0.0.0.0 ebay.doubleclick.net		# may interfere with ebay
 #0.0.0.0 google-analytics.com			# breaks some sites
 #0.0.0.0 ssl.google-analytics.com
 #0.0.0.0 www.google-analytics.l.google.com
-#0.0.0.0 stat.livejournal.com		# There are reports that this may mess 
+#0.0.0.0 stat.livejournal.com		# There are reports that this may mess
  					# up CSS on livejournal
-#0.0.0.0 stats.surfaid.ihost.com	# This has been known cause 
+#0.0.0.0 stats.surfaid.ihost.com	# This has been known cause
 					# problems with NPR.org
 #0.0.0.0 www.google-analytics.com		# breaks some sites
 #0.0.0.0 ads.imeem.com		# Seems to interfere with the functioning of imeem.com
@@ -106810,7 +106807,7 @@
 0.0.0.0 adelogs.adobe.com  #See http://www.theregister.co.uk/2014/10/07/adobe_digital_editions_4_caught_snooping_into_ebook_collections_of_users/
 0.0.0.0 ademails.com
 0.0.0.0 adlog.com.com  # Used by Ziff Davis to serve
-  # ads and track users across 
+  # ads and track users across
   # the com.com family of sites
 0.0.0.0 admin.iovation.com
 0.0.0.0 adpatrof.com
@@ -114911,7 +114908,7 @@
 
 #<ecard-scam-sites>
 
-# malicious e-card -- these sites send out mass quantities of spam 
+# malicious e-card -- these sites send out mass quantities of spam
 	# and some distribute adware and spyware
 0.0.0.0 123greetings.com  # contains one link to distributor of adware or spyware
 0.0.0.0 2000greetings.com
@@ -114945,7 +114942,7 @@
 
 #<wiki-spam-sites>
 
-# message board and wiki spam -- these sites are linked in 
+# message board and wiki spam -- these sites are linked in
 	# message board spam and are unlikely to be real sites
 0.0.0.0 21jewelry.com
 0.0.0.0 24x7.soliday.org
@@ -115446,7 +115443,7 @@
 
 #<Windows10>
 
-# Windows 10 reporting domains. 
+# Windows 10 reporting domains.
 0.0.0.0 adnexus.net
 0.0.0.0 az361816.vo.msecnd.net
 0.0.0.0 az512334.vo.msecnd.net
@@ -115467,31 +115464,31 @@
 # I'd like to thank the following people for submitting sites, and
 # helping promote the site.
 
-# Bill Allison, Harj Basi, Lance Russhing, Marshall Drew-Brook, 
+# Bill Allison, Harj Basi, Lance Russhing, Marshall Drew-Brook,
 #  Leigh Brasington, Scott Terbush, Cary Newfeldt, Kaye, Jeff
 #  Scrivener, Mark Hudson, Matt Bells, T. Kim Nguyen, Lino Demasi,
 #  Marcelo Volmaro, Troy Martin, Donald Kerns, B.Patten-Walsh,
 #  bobeangi, Chris Maniscalco, George Gilbert, Kim Nilsson, zeromus,
-#  Robert Petty, Rob Morrison, Clive Smith, Cecilia Varni, OleKing 
+#  Robert Petty, Rob Morrison, Clive Smith, Cecilia Varni, OleKing
 #  Cole, William Jones, Brian Small, Raj Tailor, Richard Heritage,
-#  Alan Harrison, Ordorica, Crimson, Joseph Cianci, sirapacz, 
-#  Dvixen, Matthew Craig, Tobias Hessem, Kevin F. Quinn, Thomas 
-#  Corthals, Chris McBee, Jaime A. Guerra, Anders Josefson, 
+#  Alan Harrison, Ordorica, Crimson, Joseph Cianci, sirapacz,
+#  Dvixen, Matthew Craig, Tobias Hessem, Kevin F. Quinn, Thomas
+#  Corthals, Chris McBee, Jaime A. Guerra, Anders Josefson,
 #  Simon Manderson, Spectre Ghost, Darren Tay, Dallas Eschenauer, Cecilia
-#  Varni, Adam P. Cole, George Lefkaditis, grzesiek, Adam Howard, Mike 
-#  Bizon, Samuel P. Mallare, Leinweber, Walter Novak, Stephen Genus, 
+#  Varni, Adam P. Cole, George Lefkaditis, grzesiek, Adam Howard, Mike
+#  Bizon, Samuel P. Mallare, Leinweber, Walter Novak, Stephen Genus,
 #  Zube, Johny Provoost, Peter Grafton, Johann Burkard, Magus, Ron Karner,
-#  Fredrik Dahlman, Michele Cybula, Bernard Conlu, Riku B, Twillers, 
+#  Fredrik Dahlman, Michele Cybula, Bernard Conlu, Riku B, Twillers,
 #  Shaika-Dzari, Vartkes Goetcherian, Michael McCown, Garth, Richard Nairn,
 #  Exzar Reed, Robert Gauthier, Floyd Wilder, Mark Drissel, Kenny Lyons,
 #  Paul Dunne, Tirath Pannu, Mike Lambert, Dan Kolcun, Daniel Aleksandersen,
-#  Chris Heegard, Miles Golding, Daniel Bisca, Frederic Begou, Charles 
-#  Fordyce, Mark Lehrer, Sebastien Nadeau-Jean, Russell Gordon, Alexey 
+#  Chris Heegard, Miles Golding, Daniel Bisca, Frederic Begou, Charles
+#  Fordyce, Mark Lehrer, Sebastien Nadeau-Jean, Russell Gordon, Alexey
 #  Gopachenko, Stirling Pearson, Alan Segal, Bobin Joseph, Chris Wall, Sean
 #  Flesch, Brent Getz, Jerry Cain, Brian Micek, Lee Hancock, Kay Thiele,
-#  Kwan Ting Chan, Wladimir Labeikovsky, Lino Demasi, Bowie Bailey, Andreas 
+#  Kwan Ting Chan, Wladimir Labeikovsky, Lino Demasi, Bowie Bailey, Andreas
 #  Marschall, Michael Tompkins, Michael O'Donnell, Jos&eacute; Lucas Teixeira
-#  de Oliveira, M. &Ouml;mer G&ouml;lgeli, and Anthony Gelibert for helping to build 
+#  de Oliveira, M. &Ouml;mer G&ouml;lgeli, and Anthony Gelibert for helping to build
 #  the hosts file.
 # Russell O'Connor for OS/2 information
 # kwadronaut for Windows 7 and Vista information
@@ -120246,6 +120243,7 @@
 # 0.0.0.0 example.com
 
 # End of entries inserted by StevenBlack hosts ########################################################################################################################################
+
 #region########################################################################################################################################
 # Start of Smart TV server list
 # Title: Smart-TV Blocklist for Pi-hole
@@ -120256,49 +120254,49 @@
 # Make sure to also use the extra RegEx list at https://perflyst.github.io/PiHoleBlocklist/regex.list, which helps remove regional LG ad domains among other things.
 
 # Panasonic Viera & panny tv
-0.0.0.0 0077777700140002.myhomescreen.tv
-0.0.0.0 cert-test.sandbox.google.com
+0.0.0.0 077777700140002.myhomescreen.tv
+0.0.0.0 ert-test.sandbox.google.com
 
-0.0.0.0 collect.myhomescreen.tv
-0.0.0.0 usage.myhomescreen.tv
+0.0.0.0 ollect.myhomescreen.tv
+0.0.0.0 sage.myhomescreen.tv
 
-0.0.0.0 collect-us-fy2014.myhomescreen.tv
-0.0.0.0 collect-us-fy2015.myhomescreen.tv
-0.0.0.0 collect-us-fy2016.myhomescreen.tv
-0.0.0.0 collect-us-fy2017.myhomescreen.tv
-0.0.0.0 collect-us-fy2018.myhomescreen.tv
-0.0.0.0 collect-us-fy2019.myhomescreen.tv
-0.0.0.0 collect-us-fy2020.myhomescreen.tv
+0.0.0.0 ollect-us-fy2014.myhomescreen.tv
+0.0.0.0 ollect-us-fy2015.myhomescreen.tv
+0.0.0.0 ollect-us-fy2016.myhomescreen.tv
+0.0.0.0 ollect-us-fy2017.myhomescreen.tv
+0.0.0.0 ollect-us-fy2018.myhomescreen.tv
+0.0.0.0 ollect-us-fy2019.myhomescreen.tv
+0.0.0.0 ollect-us-fy2020.myhomescreen.tv
 
-0.0.0.0 collect-eu-fy2014.myhomescreen.tv
-0.0.0.0 collect-eu-fy2015.myhomescreen.tv
-0.0.0.0 collect-eu-fy2017.myhomescreen.tv
-0.0.0.0 collect-eu-fy2016.myhomescreen.tv
-0.0.0.0 collect-eu-fy2018.myhomescreen.tv
-0.0.0.0 collect-eu-fy2019.myhomescreen.tv
-0.0.0.0 collect-eu-fy2020.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2014.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2015.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2017.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2016.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2018.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2019.myhomescreen.tv
+0.0.0.0 ollect-eu-fy2020.myhomescreen.tv
 
-0.0.0.0 usage-eu-fy2014.myhomescreen.tv
-0.0.0.0 usage-eu-fy2015.myhomescreen.tv
-0.0.0.0 usage-eu-fy2016.myhomescreen.tv
-0.0.0.0 usage-eu-fy2017.myhomescreen.tv
-0.0.0.0 usage-eu-fy2018.myhomescreen.tv
-0.0.0.0 usage-eu-fy2019.myhomescreen.tv
-0.0.0.0 usage-eu-fy2020.myhomescreen.tv
+0.0.0.0 sage-eu-fy2014.myhomescreen.tv
+0.0.0.0 sage-eu-fy2015.myhomescreen.tv
+0.0.0.0 sage-eu-fy2016.myhomescreen.tv
+0.0.0.0 sage-eu-fy2017.myhomescreen.tv
+0.0.0.0 sage-eu-fy2018.myhomescreen.tv
+0.0.0.0 sage-eu-fy2019.myhomescreen.tv
+0.0.0.0 sage-eu-fy2020.myhomescreen.tv
 
-0.0.0.0 usage-us-fy2014.myhomescreen.tv
-0.0.0.0 usage-us-fy2015.myhomescreen.tv
-0.0.0.0 usage-us-fy2016.myhomescreen.tv
-0.0.0.0 usage-us-fy2017.myhomescreen.tv
-0.0.0.0 usage-us-fy2018.myhomescreen.tv
-0.0.0.0 usage-us-fy2019.myhomescreen.tv
-0.0.0.0 usage-us-fy2020.myhomescreen.tv
+0.0.0.0 sage-us-fy2014.myhomescreen.tv
+0.0.0.0 sage-us-fy2015.myhomescreen.tv
+0.0.0.0 sage-us-fy2016.myhomescreen.tv
+0.0.0.0 sage-us-fy2017.myhomescreen.tv
+0.0.0.0 sage-us-fy2018.myhomescreen.tv
+0.0.0.0 sage-us-fy2019.myhomescreen.tv
+0.0.0.0 sage-us-fy2020.myhomescreen.tv
 
 #mhc-ajax-eu.myhomescreen.tv # internet connection test
 #mhc-ajax-eu-s2.myhomescreen.tv # internet connection test
 #mhc-ajax-us.myhomescreen.tv # internet connection test
 #mhc-eu.myhomescreen.tv # required for internet connectivity
-0.0.0.0 mhc-sec-eu.myhomescreen.tv
+0.0.0.0 hc-sec-eu.myhomescreen.tv
 #mhc-us.myhomescreen.tv # required for internet connectivity
 0.0.0.0 hc-sec-us.myhomescreen.tv
 #mhc-xpana-eu.myhomescreen.tv # required to start apps
@@ -120499,7 +120497,7 @@
 0.0.0.0 bbtv.3sat.de
 
 # Other useless connections from Smart-TV
-0.0.0.0 2mdn.net
+0.0.0.0 mdn.net
 0.0.0.0 d.71i.de
 0.0.0.0 dv.ettoday.net
 0.0.0.0 dvertising.com
@@ -120512,7 +120510,7 @@
 #drscdn.500px.org # blocks 500px on desktop
 #geo.opera.com # blocks opera update
 0.0.0.0 oogleads.g.doubleclick.net
-#itv.ard.de # ARD media lib - HBBTV 
+#itv.ard.de # ARD media lib - HBBTV
 0.0.0.0 bc-jite.nbcuni.com
 0.0.0.0 edbutton-adproxy-lb-prod.redbutton.de
 0.0.0.0 edbutton-lb-prod.redbutton.de
@@ -120527,7 +120525,7 @@
 
 # Netflix
 # secure, api-global, and appboot break Netflix
-#secure.netflix.com                   
+#secure.netflix.com
 #api-global.netflix.com
 #appboot.netflix.com
 #nrdp.nccp.netflix.com # Netflix playback fails on Humax DTR-T2100 (YouView) STB
@@ -120567,7 +120565,7 @@
 #location-api.hdhomerun.com # required for firmware update
 
 # Foxtel Australia cable/satellite set-top box
-0.0.0.0 _xmpp-client._tcp.managed.xmpp.foxtel.com.au
+_xmpp-client._tcp.managed.xmpp.foxtel.com.au
 0.0.0.0 anaged.xmpp.foxtel.com.au
 0.0.0.0 oxtel-prod-events.digitalsmiths.net
 0.0.0.0 2.resources.foxtel.com.au
@@ -120580,8 +120578,8 @@
 0.0.0.0 vents.cid.samba.tv
 0.0.0.0 latform.cid.samba.tv
 #file2fxm.azureedge.net # https://oisd.nl/excludes.php?w=file2fxm.azureedge.net
-0.0.0.0 7345023508.fxmconnect.com
-0.0.0.0 7345023508.fxm9485766783.com
+0.0.0.0 345023508.fxmconnect.com
+0.0.0.0 345023508.fxm9485766783.com
 
 # Xioami Mi TV
 0.0.0.0 itv.tracking.intl.miui.com
@@ -120593,7 +120591,7 @@
 0.0.0.0 ndroidtvchannels-pa.googleapis.com
 0.0.0.0 ndroidtvwatsonfe-pa.googleapis.com
 
-0.0.0.0 # https://lazyadmin.nl/home-network/how-to-block-ads-on-your-smart-tv/
+# https://lazyadmin.nl/home-network/how-to-block-ads-on-your-smart-tv/
 # 2022-02-19
 
 # Samsung
@@ -120601,7 +120599,7 @@
 0.0.0.0 vents.samsungads.com
 0.0.0.0 onfig.samsungads.com
 0.0.0.0 tatic.doubleclick.net
-0.0.0.0 vx.adgrx.com 
+0.0.0.0 vx.adgrx.com
 0.0.0.0 amsungotn.net
 0.0.0.0 amsungrm.net
 

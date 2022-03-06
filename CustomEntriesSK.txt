@@ -1,7 +1,7 @@
 127.0.0.1	localhost
 
 #7 Sirelle names
-10.7.0.1	WiFight Club
+10.7.0.1	WiFight-Club
 10.7.0.3	JenPC
 10.7.0.4    Smudger
 10.7.0.5	Diesel
@@ -48,7 +48,7 @@
 
 # Random custom SK entries
 #These entries should be unique/not appear anywhere else in this file.
-142.250.65.238 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
+142.251.40.206 fakesite.walmart                             #Test if the hosts file is working - fakesite.walmart to google.com
 0.0.0.0 alb.reddit.coming                                   #Reddit ads/MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 dual-a-0001.a-msedge.net                            #MSN Bing ad server observed by Wireshark SK 2020-01-01
 0.0.0.0 e15275.g.akamaiedge.net                             #MSN Bing ad server observed by Wireshark SK 2020-01-01
