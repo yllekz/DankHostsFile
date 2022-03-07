@@ -68,6 +68,15 @@
 0.0.0.0 analyticsengine.s3.amazonaws.com                    #Suggested by d3ward.github.io SK 2022-03-06
 0.0.0.0 advertising-api-eu.amazon.com                       #Suggested by d3ward.github.io SK 2022-03-06
 0.0.0.0 affiliationjs.s3.amazonaws.com                      #Suggested by d3ward.github.io SK 2022-03-06
+0.0.0.0 app.getsentry.com                                   #Suggested by d3ward.github.io SK 2022-03-07
+0.0.0.0 analytics.facebook.com                              #Suggested by d3ward.github.io SK 2022-03-07
+0.0.0.0 ads.facebook.com                                    #Suggested by d3ward.github.io SK 2022-03-07
+0.0.0.0 d.reddit.com                                        #Suggested by d3ward.github.io SK 2022-03-07
+0.0.0.0 metrics-dra.dt.hicloud.com                          #Suggested by d3ward.github.io SK 2022-03-07
+0.0.0.0 aax-us-iad.amazon.com                               #Observed in PiHole SK 2022-03-06
+0.0.0.0 js.mchncdn.com                                      #Narwhal iOS ads SK 2022-03-06
+0.0.0.0 api.mchnad.com                                      #Narwhal iOS ads SK 2022-03-06
+0.0.0.0 imp-lb-us2.jampp.com                                #Narwhal iOS ads SK 2022-03-06
 
 #region########################################################################################################################################
 
