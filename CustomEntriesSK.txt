@@ -11,6 +11,10 @@
 10.7.0.9	7SirellePorch
 10.7.0.10   PiCam
 10.7.0.11   Denon
+10.7.0.12   visiom65d0
+10.7.0.13   atvlivingroom
+10.7.0.14   atvmasterbedroom
+10.7.0.15   visiosoundbar
 
 # 2 Lanc names
 10.1.0.1	2Lanc-Basement
@@ -77,6 +81,16 @@
 0.0.0.0 js.mchncdn.com                                      #Narwhal iOS ads SK 2022-03-06
 0.0.0.0 api.mchnad.com                                      #Narwhal iOS ads SK 2022-03-06
 0.0.0.0 imp-lb-us2.jampp.com                                #Narwhal iOS ads SK 2022-03-06
+0.0.0.0 api-alb-ca-central-1.datadome.co                    #Pi-hole observation SK 2022-03-XX
+0.0.0.0 ms4.applovin.com                                    #Narwhatl iOS ads SK 2022-03-XX
+0.0.0.0 freshmarketer.com                                   #Suggested by d3ward.github.io SK 2022-03-14
+0.0.0.0 analytics-sg.tiktok.com                             #Suggested by d3ward.github.io SK 2022-03-14
+0.0.0.0 control-zoo-dai-default.tvinteractive.tv            #Vizio Phone-Home
+0.0.0.0 mcp.tvinteractive.tv                                #Vizio Phone-Home
+0.0.0.0 control2.tvinteractive.tv                           #Vizio Phone-Home
+0.0.0.0 control.tvinteractive.tv                            #Vizio Phone-Home
+0.0.0.0 connectivitycheck.gstatic.com                       #Vizio Phone-Home
+0.0.0.0 tvmeta-dynamic.tvinteractive.tv                     #Vizio Phone-Home
 
 #region########################################################################################################################################
 
