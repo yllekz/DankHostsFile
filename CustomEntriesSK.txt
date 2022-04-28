@@ -14,7 +14,7 @@
 10.7.0.12   visiom65d0
 10.7.0.13   atvlivingroom
 10.7.0.14   atvmasterbedroom
-10.7.0.15   visiosoundbar
+10.7.0.15   viziosoundbar
 
 # 2 Lanc names
 10.1.0.1	2Lanc-Basement
