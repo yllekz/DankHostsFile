@@ -1,5 +1,5 @@
 # Archived from https://web.archive.org/web/20220421161245/https://raw.githubusercontent.com/Xenios91/AlienVaultURLS/main/alien_vault_urls.txt
-# Alient Vault URLs OSINT Malware list
+# Alien Vault URLs OSINT Malware list
 
 0.0.0.0 cyberwise.biz
 0.0.0.0 biketools.ru
